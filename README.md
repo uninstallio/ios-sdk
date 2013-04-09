@@ -30,11 +30,11 @@ Unzip the files (if downloaded as a zip) and then add the files from appropriate
 
 a. Right click anywhere on the project navigator pane and select **Add Files to "Your project"** menu
 
-![Alt text](/path/to/img.jpg?raw=true)
+![Alt text](/READMESCR/1a.png?raw=true)
 
 b. Select the file **"libNotifyManager.a"** and Folder **"include"** and click on "Add"
 
-![Alt text](/path/to/img.jpg?raw=true)
+![Alt text](/READMESCR/1b.png?raw=true)
 
 ####2. Link Core Location Framework
 
@@ -42,11 +42,11 @@ a. Click on your project folder on the project navigator pane and go to **"Build
 
 b. Expand the **"Link Binary With Library"** pane.
 
-![Alt text](/path/to/img.jpg?raw=true)
+![Alt text](/READMESCR/2b.png?raw=true)
 
 c. Click on the **'+'** button and select **"CoreLocation.framework"** and click "Add"
 
-![Alt text](/path/to/img.jpg?raw=true)
+![Alt text](/READMESCR/2c.png?raw=true)
 
 
 ###Using Notiphi Library
