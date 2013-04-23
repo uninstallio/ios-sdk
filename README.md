@@ -1,4 +1,3 @@
-
 ![Alt text](/READMESCR/not.png?raw=true)
 
 notiphi-iphone-sdk
@@ -32,7 +31,7 @@ a. Right click anywhere on the project navigator pane and select **Add Files to 
 
 ![Alt text](/READMESCR/1a.png?raw=true)
 
-b. Select the file **"libNotifyManager.a"** and Folder **"include"** and click on "Add"
+b. Choose the Builds and then the relevant armv6 or armv7 folder. Select the file **"libNotifyManager.a"** and Folder **"include"** and click on "Add"
 
 ![Alt text](/READMESCR/1b.png?raw=true)
 
@@ -80,7 +79,7 @@ To the method
   - (void)applicationDidEnterBackground:(UIApplication *)application
  ```
 
-In your app delegate 
+In your app delegate (yourAppID and yourSecretKey will be provided by us on registration with us.)
 
 ####4. Add
 ```
