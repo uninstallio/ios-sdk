@@ -1,9 +1,9 @@
 ![Alt text](/READMESCR/not.png?raw=true)
 
-notiphi-iphone-sdk
+[Notiphi](http://www.notiphi.com) iPhone SDK
 ==================
 
-Notiphi iPhone SDK allows you to monetise your iOS apps by receiving contextual notifications. This guide will help you integrate it in a few minutes. Following steps outline the integration process.
+[Notiphi iPhone SDK (www.notiphi.com)](http://www.notiphi.com) allows you to monetise your iOS apps by receiving contextual notifications. This guide will help you integrate it in a few minutes. Following steps outline the integration process.
 
 ### Steps to integrate the sdk to your Xcode - iOS project.
 
