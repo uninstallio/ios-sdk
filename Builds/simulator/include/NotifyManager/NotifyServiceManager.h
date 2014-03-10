@@ -10,11 +10,6 @@
 #import <dispatch/dispatch.h>
 #import <CoreLocation/CoreLocation.h>
 
-#include <sys/socket.h>
-#include <sys/sysctl.h>
-#include <net/if.h>
-#include <net/if_dl.h>
-
 /*
  * Notify service manager is responsible for handling all the Notify http and web requests
  */
@@ -40,5 +35,11 @@
 -(void) cancelAllOperations;
 
 -(void) setOperationCancelledStatus:(BOOL)cancelStatus;
+
+-(void) registerForPushNotificationWithDeviceToken:(NSString *)deviceTokenStr completion:(void(^)(NSString *rsponseString))completion failed:(void(^)(NSError *erro))failed;
+
+-(void) getPromoForNotificationID:(NSString *)notificationID completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
+
+-(NSString *)getUUID;
 
 @end

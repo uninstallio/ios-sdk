@@ -18,7 +18,9 @@
 
 -(void)registerRegionsFromResponseDictionary:(NSDictionary *)regionsDictionary;
 
--(void) stopAllRegionTracking;
+-(void) startRegionsTracking;
+
+-(void) stopRegionsTracking;
 
 -(id) initWithDelegate:(id)delegate secret:(NSString *)secret;
 
