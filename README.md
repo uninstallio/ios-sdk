@@ -50,7 +50,7 @@ c. Click on the **'+'** button and select **"CoreLocation.framework"** and click
 
 ###Using Notiphi Library
 
-####1. Import 
+####1. Import
 **"NotifyManager.h"** to your app delegate
 
 ####2. Add
@@ -62,7 +62,7 @@ To the method
 
 ```
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:
-(NSDictionary *)launchOptions 
+(NSDictionary *)launchOptions
 ```
 
 In your app delegate
@@ -90,14 +90,14 @@ To the method
 
 ```
   - (void)applicationWillEnterForeground:(UIApplication *)application
- ```
+```
 
-In your app delegate 
+In your app delegate
 
 ####5. Add
 ```
   [[NotifyManager sharedManager] processLocalNotification:notification];
- ```
+```
 
 To the method
 
@@ -107,12 +107,35 @@ didReceiveLocalNotification:
 (UILocalNotification *)notification
 ```
 
- In your app delegate
+In your app delegate
 
+####6. Add
+```
+    [[NotifyManager sharedManager] processRemoteNotification:userInfo];
 
-### Authors and Contributors
+```
+to the method
+```
+-(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+```
 
-This library owes its existence to the hard work of **Alok** and **Shahzin**.
+####7. Add
+```
+    [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
+```
+to the method
+```
+-(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+```
+
+####8. [Optional] Add
+```
+    NSLog(@"Failed to register for push Error %@",[error description]);
+```
+to the method
+```
+-(void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+```
 
 ### Support or Contact
 
