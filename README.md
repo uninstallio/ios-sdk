@@ -203,7 +203,8 @@ In Keychain Access your certificate should be shown under “My Certificates”.
 
 ![Alt text](/READMESCR/certs.png?raw=true)
 
-****Exporting the .p12 file****
+####Exporting the .p12 file
+
 Select the certificate that was just added to Keychain Access and select File -> Export Items... from the menu. When saving the file, use the Personal Information Exchange (.p12) format.
 
 ![Alt text](/READMESCR/export.png?raw=true)
