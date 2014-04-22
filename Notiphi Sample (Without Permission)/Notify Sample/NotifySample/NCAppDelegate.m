@@ -21,8 +21,8 @@
     self.viewController = [[NCViewController alloc] initWithNibName:@"NCViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
-    
+
+
     //Check if the app was waken up by notify services
     [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
     return YES;
@@ -37,7 +37,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     //Starts Notify Services
     NSLog(@"Starting notiphi services");
@@ -67,5 +67,21 @@
     //Check whether the local notification was made by notify
     [[NotifyManager sharedManager] processLocalNotification:notification];
 }
+
+-(void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
+    //NSLog(@"Failed to register for push Error %@",[error description]);
+}
+
+-(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
+    //NSLog(@"Remote notification %@",userInfo);
+    [[NotifyManager sharedManager] processRemoteNotification:userInfo];
+}
+
+-(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
+    //NSLog(@"registerd for push");
+    //NSLog(@"%@",deviceToken);
+    [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
+}
+
 
 @end
