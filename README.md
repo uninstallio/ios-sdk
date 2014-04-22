@@ -3,7 +3,7 @@
 [Notiphi](http://www.notiphi.com) iPhone SDK
 ==================
 
-[Notiphi iPhone SDK (www.notiphi.com)](http://www.notiphi.com) allows you to monetise your iOS apps by receiving contextual notifications. This guide will help you integrate it in a few minutes. Following steps outline the integration process.
+[Notiphi iPhone SDK (www.notiphi.com)](http://www.notiphi.com) allows you to better engage your iOS apps by sending contextual notifications. This guide will help you integrate it in a few minutes. Following steps outline the integration process.
 
 ### Steps to integrate the sdk to your Xcode - iOS project.
 
@@ -25,13 +25,13 @@ wget https://github.com/alokmishra/notiphi-iphone-sdk/archive/master.zip
 
 ####1. Add static library
 
-Unzip the files (if downloaded as a zip) and then add the files from appropriate targets in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project.
+Unzip the files (if downloaded as a zip) and then add the files from **All Targets** in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project.
 
 a. Right click anywhere on the project navigator pane and select **Add Files to "Your project"** menu
 
 ![Alt text](/READMESCR/1a.png?raw=true)
 
-b. Choose the Builds and then the relevant armv6 or armv7 folder. Select the file **"libNotifyManager.a"** and Folder **"include"** and click on "Add"
+b. Choose the Builds and then the **All Targets** folder. Select the file **"libNotifyManager.a"** and Folder **"include"** and click on "Add"
 
 ![Alt text](/READMESCR/1b.png?raw=true)
 
