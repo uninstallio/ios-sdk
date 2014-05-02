@@ -28,7 +28,7 @@
 
 -(void) notifyClusterExit:(CLRegion *)region completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
--(void) notifyUserDidClickedNotificationWithOfferID:(NSInteger)offerID completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
+-(void) notifyUserDidClickedNotificationWithOfferID:(NSString *)offerID completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
 -(void) registerAppWithAppID:(NSString *)appID enroll:(BOOL)enrolled onCompletion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
