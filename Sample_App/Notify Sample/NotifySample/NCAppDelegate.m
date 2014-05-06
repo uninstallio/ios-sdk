@@ -21,10 +21,16 @@
     self.viewController = [[NCViewController alloc] initWithNibName:@"NCViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-
-
+    
+    
     //Check if the app was waken up by notify services
     [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demopro" key:@"PNNe5wL2ANnD6pVUysJk"];
+
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert |
+      UIRemoteNotificationTypeBadge |
+      UIRemoteNotificationTypeSound)];
+
     return YES;
 }
 
@@ -40,16 +46,16 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     //Starts Notify Services
-    NSLog(@"Starting notiphi services");
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demo" key:@"notikum2013"];
+    NSLog(@"Going to background");
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     //Stops notify services
-    NSLog(@"Stopping notiphi services");
-    [[NotifyManager sharedManager] stopNotifyServices];
+    NSLog(@"Starting notiphi services");
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demopro" key:@"PNNe5wL2ANnD6pVUysJk"];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
@@ -65,21 +71,29 @@
 
 -(void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
     //Check whether the local notification was made by notify
+    NSLog(@"Received a local notification");
     [[NotifyManager sharedManager] processLocalNotification:notification];
 }
 
 -(void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
-    //NSLog(@"Failed to register for push Error %@",[error description]);
+    NSLog(@"Failed to register for push Error %@",[error description]);
 }
 
 -(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
-    //NSLog(@"Remote notification %@",userInfo);
+    NSLog(@"Remote notification %@",userInfo);
     [[NotifyManager sharedManager] processRemoteNotification:userInfo];
 }
 
+- (void)  application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    
+    [[NotifyManager sharedManager] processRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-    //NSLog(@"registerd for push");
-    //NSLog(@"%@",deviceToken);
+    NSLog(@"registerd for push");
+    NSLog(@"%@",deviceToken);
     [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
 }
 
