@@ -89,6 +89,8 @@ Once the permissions are set, we can change the code as shown below.
 ####2. Add
 ```
   [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
+  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"#yourAppID"
+key:@"#yourSecretKey"];
 ```
 
 To the method
@@ -109,25 +111,13 @@ key:@"#yourSecretKey"];
 To the method
 
 ```
-  - (void)applicationDidEnterBackground:(UIApplication *)application
- ```
-
-In your app delegate (yourAppID and yourSecretKey will be provided by us on registration with us.)
-
-####4. Add
-```
-  [[NotifyManager sharedManager] stopNotifyServices];
- ```
-
-To the method
-
-```
   - (void)applicationWillEnterForeground:(UIApplication *)application
 ```
 
-In your app delegate
+In your app delegate (yourAppID and yourSecretKey will be provided by us on registration with us.)
 
-####5. Add
+
+####4. Add
 ```
   [[NotifyManager sharedManager] processLocalNotification:notification];
 ```
@@ -142,7 +132,7 @@ didReceiveLocalNotification:
 
 In your app delegate
 
-####6. Add
+####5. Add
 ```
     [[NotifyManager sharedManager] processRemoteNotification:userInfo];
 
@@ -152,7 +142,7 @@ to the method
 -(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 ```
 
-####7. Add
+####6. Add
 ```
     [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
 ```
@@ -161,13 +151,17 @@ to the method
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 ```
 
-####8. [Optional] Add
+####7. IOS7 ONLY: Add
 ```
-    NSLog(@"Failed to register for push Error %@",[error description]);
+    [[NotifyManager sharedManager] processRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+
 ```
 to the method
 ```
--(void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+- (void)  application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+
 ```
 
 
