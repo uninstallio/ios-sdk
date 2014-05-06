@@ -10,6 +10,11 @@
 #import <dispatch/dispatch.h>
 #import <CoreLocation/CoreLocation.h>
 
+#include <sys/socket.h>
+#include <sys/sysctl.h>
+#include <net/if.h>
+#include <net/if_dl.h>
+
 /*
  * Notify service manager is responsible for handling all the Notify http and web requests
  */
@@ -28,7 +33,7 @@
 
 -(void) notifyClusterExit:(CLRegion *)region completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
--(void) notifyUserDidClickedNotificationWithOfferID:(NSInteger)offerID completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
+-(void) notifyUserDidClickedNotificationWithOfferID:(NSString *)offerID completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
 -(void) registerAppWithAppID:(NSString *)appID enroll:(BOOL)enrolled onCompletion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 

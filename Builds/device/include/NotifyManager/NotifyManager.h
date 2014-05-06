@@ -21,8 +21,6 @@
 
 -(void) startNotifyServicesWithAppID:(NSString *)appID key:(NSString *)key;
 
--(void) seekUserPermissionForNotifyServiceWithTitle:(NSString *)title message:(NSString *)message;
-
 -(void) stopNotifyServices;
 
 -(void) processLocalNotification:(UILocalNotification *)localNotification;

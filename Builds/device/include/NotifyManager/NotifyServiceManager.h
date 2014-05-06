@@ -10,6 +10,11 @@
 #import <dispatch/dispatch.h>
 #import <CoreLocation/CoreLocation.h>
 
+#include <sys/socket.h>
+#include <sys/sysctl.h>
+#include <net/if.h>
+#include <net/if_dl.h>
+
 /*
  * Notify service manager is responsible for handling all the Notify http and web requests
  */
