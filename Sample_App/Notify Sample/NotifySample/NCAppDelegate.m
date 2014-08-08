@@ -73,6 +73,12 @@
     //Check whether the local notification was made by notify
     NSLog(@"Received a local notification");
     [[NotifyManager sharedManager] processLocalNotification:notification];
+    //NSDictionary *userInfo=[notification userInfo];
+    //NSDictionary *offerDict=[userInfo objectForKey:@"NotifyOfferUserInfoOfferKey"];
+    //NSDictionary *payload=[offerDict objectForKey:@"client_payload"];
+    
+    //NSLog(@"value: %@ \n", payload);
+
 }
 
 -(void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{

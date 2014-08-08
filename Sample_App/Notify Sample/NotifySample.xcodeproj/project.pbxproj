@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		21BEAA34191927A20096A0E0 /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21BEAA2D191927A20096A0E0 /* libNotifyManager.a */; };
+		217F31A1192E099E00D0AF9F /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 217F319E192E098600D0AF9F /* libNotifyManager.a */; };
 		F14826951714166900D77C06 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F14826941714166900D77C06 /* Default-568h@2x.png */; };
 		F186185B167F4164003CE49E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185A167F4164003CE49E /* UIKit.framework */; };
 		F186185D167F4164003CE49E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185C167F4164003CE49E /* Foundation.framework */; };
@@ -26,6 +26,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		217F319D192E098600D0AF9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 217F3198192E098600D0AF9F /* NotifyManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F18B1927161B172200F9534C;
+			remoteInfo = NotifyManager;
+		};
+		217F319F192E099800D0AF9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 217F3198192E098600D0AF9F /* NotifyManager.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F18B1926161B172200F9534C;
+			remoteInfo = NotifyManager;
+		};
 		F186187C167F4164003CE49E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F186184D167F4164003CE49E /* Project object */;
@@ -36,12 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		217F3198192E098600D0AF9F /* NotifyManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NotifyManager.xcodeproj; path = "../../../Notify-iPhone/NotifyManager.xcodeproj"; sourceTree = "<group>"; };
 		21BEAA2B191918CB0096A0E0 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNotifyManager.a; path = "../../../Library/Developer/Xcode/DerivedData/NotifySample-facjtzslligmfzdknsuphgopnjzm/Build/Products/Debug-iphoneos/libNotifyManager.a"; sourceTree = "<group>"; };
-		21BEAA2D191927A20096A0E0 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNotifyManager.a; path = "../../../Notify-iPhone/build/Release-iphoneos/libNotifyManager.a"; sourceTree = "<group>"; };
-		21BEAA30191927A20096A0E0 /* NotifyCoreLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyCoreLocationManager.h; sourceTree = "<group>"; };
-		21BEAA31191927A20096A0E0 /* NotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyManager.h; sourceTree = "<group>"; };
-		21BEAA32191927A20096A0E0 /* NotifyRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRegionManager.h; sourceTree = "<group>"; };
-		21BEAA33191927A20096A0E0 /* NotifyServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyServiceManager.h; sourceTree = "<group>"; };
 		F14826941714166900D77C06 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F1861856167F4164003CE49E /* NotifySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotifySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F186185A167F4164003CE49E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -70,10 +80,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				217F31A1192E099E00D0AF9F /* libNotifyManager.a in Frameworks */,
 				F186189D167F42E7003CE49E /* CoreLocation.framework in Frameworks */,
 				F186185B167F4164003CE49E /* UIKit.framework in Frameworks */,
 				F186185D167F4164003CE49E /* Foundation.framework in Frameworks */,
-				21BEAA34191927A20096A0E0 /* libNotifyManager.a in Frameworks */,
 				F186185F167F4164003CE49E /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,31 +101,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		21BEAA2E191927A20096A0E0 /* include */ = {
+		217F3199192E098600D0AF9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				21BEAA2F191927A20096A0E0 /* NotifyManager */,
+				217F319E192E098600D0AF9F /* libNotifyManager.a */,
 			);
-			name = include;
-			path = "../../../Notify-iPhone/build/Release-iphoneos/include";
-			sourceTree = "<group>";
-		};
-		21BEAA2F191927A20096A0E0 /* NotifyManager */ = {
-			isa = PBXGroup;
-			children = (
-				21BEAA30191927A20096A0E0 /* NotifyCoreLocationManager.h */,
-				21BEAA31191927A20096A0E0 /* NotifyManager.h */,
-				21BEAA32191927A20096A0E0 /* NotifyRegionManager.h */,
-				21BEAA33191927A20096A0E0 /* NotifyServiceManager.h */,
-			);
-			path = NotifyManager;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F186184B167F4164003CE49E = {
 			isa = PBXGroup;
 			children = (
-				21BEAA2D191927A20096A0E0 /* libNotifyManager.a */,
-				21BEAA2E191927A20096A0E0 /* include */,
+				217F3198192E098600D0AF9F /* NotifyManager.xcodeproj */,
 				F14826941714166900D77C06 /* Default-568h@2x.png */,
 				F186189C167F42E7003CE49E /* CoreLocation.framework */,
 				F1861860167F4164003CE49E /* NotifySample */,
@@ -204,6 +201,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				217F31A0192E099800D0AF9F /* PBXTargetDependency */,
 			);
 			name = NotifySample;
 			productName = NotifySample;
@@ -259,6 +257,12 @@
 			mainGroup = F186184B167F4164003CE49E;
 			productRefGroup = F1861857167F4164003CE49E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 217F3199192E098600D0AF9F /* Products */;
+					ProjectRef = 217F3198192E098600D0AF9F /* NotifyManager.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F1861855167F4164003CE49E /* NotifySample */,
@@ -266,6 +270,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		217F319E192E098600D0AF9F /* libNotifyManager.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libNotifyManager.a;
+			remoteRef = 217F319D192E098600D0AF9F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F1861854167F4164003CE49E /* Resources */ = {
@@ -339,6 +353,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		217F31A0192E099800D0AF9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NotifyManager;
+			targetProxy = 217F319F192E099800D0AF9F /* PBXContainerItemProxy */;
+		};
 		F186187D167F4164003CE49E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F1861855167F4164003CE49E /* NotifySample */;
@@ -445,7 +464,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NotifySample/NotifySample-Prefix.pch";
 				INFOPLIST_FILE = "NotifySample/NotifySample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/NotifySample/Libs/Notify Manager\"",
@@ -474,7 +493,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NotifySample/NotifySample-Prefix.pch";
 				INFOPLIST_FILE = "NotifySample/NotifySample-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/NotifySample/Libs/Notify Manager\"",
