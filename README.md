@@ -3,7 +3,7 @@
 [Notiphi](http://www.notiphi.com) iPhone SDK
 ==================
 
-[Notiphi iPhone SDK (www.notiphi.com)](http://www.notiphi.com) allows you to better engage your iOS apps by sending contextual notifications. This guide will help you integrate it in a few minutes. Following steps outline the integration process.
+[Notiphi iPhone SDK (www.notiphi.com)](http://www.notiphi.com) allows you to better understand your iOS apps by profiling your users. This guide will help you integrate it in a few minutes. Following steps outline the integration process.
 
 ### Steps to integrate the sdk to your Xcode - iOS project.
 
@@ -100,7 +100,7 @@ To the method
 (NSDictionary *)launchOptions
 ```
 
-In your app delegate. yourAppID and yourSecretKey will be provided by us on registration with us.)
+In your app delegate. yourAppID and yourSecretKey will be provided by us on registration with us.
 
 ####3. Add
 ```
