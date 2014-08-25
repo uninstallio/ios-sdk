@@ -69,39 +69,16 @@
 }
 
 
--(void) application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
-    //Check whether the local notification was made by notify
-    NSLog(@"Received a local notification");
-    [[NotifyManager sharedManager] processLocalNotification:notification];
-    //NSDictionary *userInfo=[notification userInfo];
-    //NSDictionary *offerDict=[userInfo objectForKey:@"NotifyOfferUserInfoOfferKey"];
-    //NSDictionary *payload=[offerDict objectForKey:@"client_payload"];
-    
-    //NSLog(@"value: %@ \n", payload);
-
-}
-
--(void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error{
-    NSLog(@"Failed to register for push Error %@",[error description]);
-}
-
--(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo{
-    NSLog(@"Remote notification %@",userInfo);
-    [[NotifyManager sharedManager] processRemoteNotification:userInfo];
-}
-
-- (void)  application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
-    
-    [[NotifyManager sharedManager] processRemoteNotification:userInfo];
-    completionHandler(UIBackgroundFetchResultNewData);
-}
 
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
     NSLog(@"registerd for push");
     NSLog(@"%@",deviceToken);
     [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
 }
-
-
+- (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    NSLog(@"Inside timed background fetch \n");
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demopro" key:@"PNNe5wL2ANnD6pVUysJk"];
+    completionHandler(UIBackgroundFetchResultNoData);
+}
 @end
