@@ -89,8 +89,8 @@ Once the permissions are set, we can change the code as shown below.
 ####2. Add
 ```
   [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
-  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"#yourAppID"
-key:@"#yourSecretKey"];
+  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourAppID"
+key:@"yourSecretKey"];
 ```
 
 To the method
@@ -100,12 +100,12 @@ To the method
 (NSDictionary *)launchOptions
 ```
 
-In your app delegate
+In your app delegate. yourAppID and yourSecretKey will be provided by us on registration with us.)
 
 ####3. Add
 ```
-  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"#yourAppID"
-key:@"#yourSecretKey"];
+  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourAppID"
+key:@"yourSecretKey"];
 ```
 
 To the method
@@ -114,35 +114,11 @@ To the method
   - (void)applicationWillEnterForeground:(UIApplication *)application
 ```
 
-In your app delegate (yourAppID and yourSecretKey will be provided by us on registration with us.)
+In your app delegate.
+
 
 
 ####4. Add
-```
-  [[NotifyManager sharedManager] processLocalNotification:notification];
-```
-
-To the method
-
-```
-  - (void)application:(UIApplication *)application
-didReceiveLocalNotification:
-(UILocalNotification *)notification
-```
-
-In your app delegate
-
-####5. Add
-```
-    [[NotifyManager sharedManager] processRemoteNotification:userInfo];
-
-```
-to the method
-```
--(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
-```
-
-####6. Add
 ```
     [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
 ```
@@ -151,7 +127,7 @@ to the method
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 ```
 
-####7. IOS7 ONLY: Add
+####5. IOS7 and above ONLY: Add
 ```
     [[NotifyManager sharedManager] processRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
@@ -163,8 +139,16 @@ to the method
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 
 ```
+####6. IOS7 and above ONLY: Add
+```
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourAppID" key:@"yourSecretKey"];
+    completionHandler(UIBackgroundFetchResultNoData);
 
-
+```
+to the method
+```
+- (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+```
 
 
 ### Send us your Push certificate for testing
