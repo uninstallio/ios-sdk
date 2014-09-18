@@ -55,7 +55,21 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     //Stops notify services
     NSLog(@"Starting notiphi services");
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demopro" key:@"PNNe5wL2ANnD6pVUysJk"];
+
+    NSDictionary *dict1 = @{@"Event-Name" : @"Event-Value"};
+    NSDictionary *dict2 = @{@"IDSync" : @"ABC1234"};
+
+    NSArray * arrayOfJsons = @[dict1,dict2];
+    if ([NSJSONSerialization isValidJSONObject:arrayOfJsons])  //can it converted to valid json.
+    {
+        NSError *error;
+        NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfJsons options:0 error:&error];
+        NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+        [[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];
+
+    }
+
+
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
