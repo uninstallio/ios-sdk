@@ -52,9 +52,8 @@ c. Click on the **'+'** button and select **"CoreLocation.framework"** and click
 Notiphi needs some background capabilities. You need to specify that you’ll use these feature in the **UIBackgroundModes** key in your info plist.
 We need the following list of permissions
 
-1. location
-2. fetch
-3. remote-notification
+1. fetch
+2. remote-notification
 
 The easiest way to do this is to use the new Capabilities tab in Xcode 5’s project editor, which includes a Background Modes section for easy configuration of multitasking options as shown below.
 
@@ -66,7 +65,6 @@ Alternatively, you can edit the key manually:
 <key>UIBackgroundModes</key>
   <array>
     <string>fetch</string>
-    <string>location</string>
     <string>remote-notification</string>
   </array>
 ```
