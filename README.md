@@ -115,7 +115,6 @@ To the method
 In your app delegate.
 
 
-
 ####4. Add
 ```
     [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
@@ -125,7 +124,7 @@ to the method
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 ```
 
-####5. IOS7 and above ONLY: Add
+####5. Add
 ```
     [[NotifyManager sharedManager] processRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
@@ -137,7 +136,7 @@ to the method
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 
 ```
-####6. IOS7 and above ONLY: Add
+####6. Add
 ```
     [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourAppID" key:@"yourSecretKey"];
     completionHandler(UIBackgroundFetchResultNoData);
@@ -148,7 +147,25 @@ to the method
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 ```
 
+###Sending Events Using Notiphi Library
+If you need to send us some events then you would need to do the additional steps as shown below.
 
+```
+    NSDictionary *dict1 = @{@"Event-Name" : @"Event-Value"};
+    NSDictionary *dict2 = @{@"IDSync" : @"ABC1234"};
+
+    NSArray * arrayOfDicts = @[dict1,dict2];
+    if ([NSJSONSerialization isValidJSONObject:arrayOfDicts])  //can it converted to valid json.
+    {
+        NSError *error;
+        NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfDicts options:0 error:&error];
+        NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+        [[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];
+
+    }
+
+
+```
 ### Send us your Push certificate for testing
 
 In the Apple Developer Members Center, click on Identifiers under iOS Apps and locate your application in the list. Click on that app which you want to configure. If Push Notifications is disabled (as shown below)
