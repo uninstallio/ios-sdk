@@ -1,13 +1,26 @@
-![Alt text](/READMESCR/not.png?raw=true)
+[Uninstall Insights](http://uninstall.io) iPhone SDK
+===================
 
-[Notiphi](http://www.notiphi.com) iPhone SDK
-==================
+[Uninstall SDK (http://uninstall.io)](http://uninstall.io) helps you to understand the reasons for your app uninstalls, reduce the uninstall rate using a powerful predictive engine and also get app Re-installs through a unique actionable channel. 
 
-[Notiphi iPhone SDK (www.notiphi.com)](http://www.notiphi.com) allows you to better understand your iOS apps by profiling your users. This guide will help you integrate it in a few minutes. Following steps outline the integration process.
+This guide will provide you step by step details on how to integrate the SDK in just a few minutes. Following steps outline the integration process in details.
 
 ### Steps to integrate the sdk to your Xcode - iOS project.
 
-####Setup
+* Download the zipped package and Unzip the file.
+* Attach the Uninstall Library to your project.
+* Configure libraries and permissions in the project.
+* Add Uninstall methods from library in the project.
+* Sending Events Using Uninstall Library.
+  * Unique System User ID and Email ID.
+  * Install Source.
+  * App Events.
+  * Crash Events
+* Send us your Push certificate for testing
+
+
+
+####Download the zipped package and Unzip the file.
 
 Clone this repository
 
@@ -20,12 +33,13 @@ or download the zipped package.
 ```
 wget https://github.com/alokmishra/notiphi-iphone-sdk/archive/master.zip
 ```
+Unzip the files (if downloaded as a zip).
 
-###Attaching the Notiphi Library
+###Attach the Uninstall Library to your project
 
 ####1. Add static library
 
-Unzip the files (if downloaded as a zip) and then add the files from **All Targets** in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project.
+Add the files from **All Targets** in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project.
 
 a. Right click anywhere on the project navigator pane and select **Add Files to "Your project"** menu
 
@@ -47,9 +61,9 @@ c. Click on the **'+'** button and select **"CoreLocation.framework"** and click
 
 ![Alt text](/READMESCR/2c.png?raw=true)
 
-###Adding permissions
+###Configure libraries and permissions in the project
 
-Notiphi needs some background capabilities. You need to specify that you’ll use these feature in the **UIBackgroundModes** key in your info plist.
+Uninstall needs some background capabilities. You need to specify that you’ll use these feature in the **UIBackgroundModes** key in your info plist.
 We need the following list of permissions
 
 1. fetch
@@ -79,7 +93,7 @@ You would also need to add the following device capability in the info plist fil
 ```
 
 Once the permissions are set, we can change the code as shown below.
-###Using Notiphi Library
+###Add Uninstall methods from library in the project
 
 ####1. Import
 **"NotifyManager.h"** to your app delegate
@@ -147,25 +161,140 @@ to the method
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 ```
 
-###Sending Events Using Notiphi Library
+###Sending Events Using Uninstall Library
 If you need to send us some events then you would need to do the additional steps as shown below.
 
-```
-    NSDictionary *dict1 = @{@"Event-Name" : @"Event-Value"};
-    NSDictionary *dict2 = @{@"IDSync" : @"ABC1234"};
+#####1) Unique System User ID and Email ID
+Pass the Unique System User ID and Email Id to our SDK. This data will be used to synchronize the ID’s between our systems and also to take certain actions. This information has to be passed only once in the lifetime of the app. Help code snippet below.
 
-    NSArray * arrayOfDicts = @[dict1,dict2];
-    if ([NSJSONSerialization isValidJSONObject:arrayOfDicts])  //can it converted to valid json.
+```
+ NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
+ NSString* isFirstTimeInstall = @"isFirstTimeInstall";
+ if([preferences objectForKey: isFirstTimeInstall] == nil)
     {
-        NSError *error;
-        NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfDicts options:0 error:&error];
-        NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
-        [[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];
-
+        NSDictionary *dict1 = @{@"USERID" : @"user_id"};
+        NSDictionary *dict2 = @{@"EMAILID" : @"email_id"};
+        NSArray * arrayOfDicts = @[dict1,dict2];
+        if ([NSJSONSerialization isValidJSONObject:arrayOfDicts]) 
+        {
+            NSError *error;
+            NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfDicts options:0 error:&error];
+            NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+            [[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];
+            
+        }
+        
     }
+    else
+    {
+        const BOOL presentLevel = [preferences boolForKey: isFirstTimeInstall];
+    }
+    
+NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
+NSString* isFirstTimeInstall = @"isFirstTimeInstall";
+const NSInteger presentLevel = ...;
+[preferences setBool:presentLevel forKey:isFirstTimeInstall];
+const BOOL didSave = [preferences synchronize];
+
+```
+
+#####2) Install Source
+The Install source needs to be passed to our SDK. This is used to measure the Ad channels (especially Inorganic sources) performance. Information can be passed in two ways:
+
+#####a. Via 3rd party platform
+If you use any third party attribution platform and supports data extraction via API, then send us the API keys and we will directly extract the information from there. Please check with your product/marketing manager for details on 3rd party platform.
+
+#####b. Via the App
+In case you do not use any 3rd party platform or the platform doesn’t support any API then pass the data to our SDK via our event capturing feature This information has to be passed only once in the lifetime of the app during installation. Help code snippet below.
+
+```
+NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
+NSString* isFirstSourceData = @"isFirstSourceData";
+if([preferences objectForKey: isFirstSourceData] == nil)
+    {
+        NSDictionary *dict1 = @{@"SOURCEDATA" : @"ad_channel_API_KEY"}; // via 3rd party         
+       NSDictionary *dict2 = @{@"SOURCEDATA" : NULL};
+        NSArray * arrayOfDicts = @[dict1,dict2];
+        if ([NSJSONSerialization isValidJSONObject:arrayOfDicts]) 
+        {
+            NSError *error;
+            NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfDicts options:0 error:&error];
+            NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+            [[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];
+            
+        }
+        
+    }
+    else
+    {
+        const BOOL presentLevel = [preferences boolForKey: isFirstSourceData];
+    }
+    
+NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
+NSString* isFirstSourceData = @"isFirstSourceData";
+const NSInteger presentLevel = ...;
+[preferences setBool:presentLevel forKey: isFirstSourceData];
+const BOOL didSave = [preferences synchronize];
+
+```
+
+#####3) App Events
+All app events have to be passed to our SDK. Information can be passed in two ways:
+
+#####a. Via 3rd party platform
+If you use any third party analytics platform and supports data extraction via API, then send us the API keys and we will directly extract the information from there. Please check with your product/marketing manager for details on 3rd party platform.
+
+#####b. Via the App
+In case you do not use any 3rd party platform or the platform doesn’t support any API then pass the data to our SDK via our event-capturing feature. Help code snippet below.
 
 
 ```
+NSDictionary *dict1 = @{@"Event-Name" : @"Event-Value"};     NSDictionary *dict2 = @{@"IDSync" : @"ABC1234"};      
+NSArray * arrayOfDicts = @[dict1,dict2];     
+if ([NSJSONSerialization isValidJSONObject:arrayOfDicts])  
+//can it converted to valid json.     
+{         
+NSError *error;         
+NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfDicts options:0 error:&error];        
+ NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];         
+[[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];      }
+
+```
+
+#####4) Crash Events
+Send the API keys of the crash-reporting platform to us. We will extract the information using their API. In case you are reporting the crash manually, then pass the information to our SDK as well. Help code snippet below.
+
+```
+NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
+NSString* isFirstReportData = @"isFirstReportData";
+if([preferences objectForKey: isFirstReportData] == nil)
+    {
+        NSDictionary *dict1 = @{@"CRASH_REPORT_ID" : @"crash_report_id"}; 
+       
+        NSArray * arrayOfDicts = @[dict1];
+        if ([NSJSONSerialization isValidJSONObject:arrayOfDicts]) 
+{
+            NSError *error;
+            NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfDicts options:0 error:&error];
+            NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
+            [[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];
+            
+        }
+        
+    }
+    else
+    {
+        const BOOL presentLevel = [preferences boolForKey: isFirstReportData];
+    }
+    
+NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
+NSString* isFirstReportData = @"isFirstReportData";
+const NSInteger presentLevel = ...;
+[preferences setBool:presentLevel forKey: isFirstReportData];
+const BOOL didSave = [preferences synchronize];
+
+```
+
 ### Send us your Push certificate for testing
 
 In the Apple Developer Members Center, click on Identifiers under iOS Apps and locate your application in the list. Click on that app which you want to configure. If Push Notifications is disabled (as shown below)
