@@ -36,5 +36,7 @@
 -(BOOL) isAppLaunchedByNotifyService:(NSDictionary *)launchOptions;
 
 -(void) registerForPushNotificationUsingDeviceToken:(NSData *)deviceToken;
+-(void) sendEventsWithJSONString:(NSString *)jsonString;
+
 
 @end

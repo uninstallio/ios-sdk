@@ -45,6 +45,8 @@
 
 -(void) getPromoForNotificationID:(NSString *)notificationID completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
+-(void) sendEventsWithJson:(NSString *)eventJsonStr completion:(void(^)(NSString *rsponseString))completion failed:(void(^)(NSError *erro))failed;
+
 -(NSString *)getUUID;
 
 @end
