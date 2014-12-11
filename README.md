@@ -161,6 +161,18 @@ to the method
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 ```
 
+####6. Add
+```
+    [[NotifyManager sharedManager] sendEventsOnFocusLose];
+
+```
+to the method
+```
+- (void)applicationDidEnterBackground:(UIApplication *)application
+```
+
+
+
 ###Sending Events Using Uninstall Library
 If you need to send us some events then you would need to do the additional steps as shown below.
 
