@@ -14,7 +14,7 @@
  */
 
 @interface NotifyManager : NSObject<CLLocationManagerDelegate,UIAlertViewDelegate>{
-
+    
 }
 
 +(NotifyManager *)sharedManager;
@@ -36,7 +36,15 @@
 -(BOOL) isAppLaunchedByNotifyService:(NSDictionary *)launchOptions;
 
 -(void) registerForPushNotificationUsingDeviceToken:(NSData *)deviceToken;
+
 -(void) sendEventsWithJSONString:(NSString *)jsonString;
+
+-(void) takeEventsArrayOnFocusLose:(NSArray *)arrayOfJsons;
+
+-(void) sendEventsOnFocusLose;
+
+-(void) setEvents:(NSArray *)eventsArray;
+
 
 
 @end
