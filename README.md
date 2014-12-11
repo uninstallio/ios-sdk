@@ -57,7 +57,7 @@ b. Expand the **"Link Binary With Library"** pane.
 
 ![Alt text](/READMESCR/2b.png?raw=true)
 
-c. Click on the **'+'** button and select **"CoreLocation.framework"** and click "Add"
+c. Click on the **'+'** button and select **"CoreLocation.framework"** and **"Ad.Support.framework"** and click "Add"
 
 ![Alt text](/READMESCR/2c.png?raw=true)
 
@@ -175,6 +175,7 @@ Pass the Unique System User ID and Email Id to our SDK. This data will be used t
         NSDictionary *dict1 = @{@"USERID" : @"user_id"};
         NSDictionary *dict2 = @{@"EMAILID" : @"email_id"};
         NSArray * arrayOfDicts = @[dict1,dict2];
+        [[NotifyManager sharedManager] setEvents:arrayOfDicts];
         if ([NSJSONSerialization isValidJSONObject:arrayOfDicts]) 
         {
             NSError *error;
@@ -215,6 +216,7 @@ if([preferences objectForKey: isFirstSourceData] == nil)
         NSDictionary *dict1 = @{@"SOURCEDATA" : @"ad_channel_API_KEY"}; // via 3rd party         
        NSDictionary *dict2 = @{@"SOURCEDATA" : NULL};
         NSArray * arrayOfDicts = @[dict1,dict2];
+        [[NotifyManager sharedManager] setEvents:arrayOfDicts];
         if ([NSJSONSerialization isValidJSONObject:arrayOfDicts]) 
         {
             NSError *error;
@@ -251,6 +253,7 @@ In case you do not use any 3rd party platform or the platform doesn’t support 
 ```
 NSDictionary *dict1 = @{@"Event-Name" : @"Event-Value"};     NSDictionary *dict2 = @{@"IDSync" : @"ABC1234"};      
 NSArray * arrayOfDicts = @[dict1,dict2];     
+[[NotifyManager sharedManager] setEvents:arrayOfDicts];
 if ([NSJSONSerialization isValidJSONObject:arrayOfDicts])  
 //can it converted to valid json.     
 {         
@@ -272,6 +275,7 @@ if([preferences objectForKey: isFirstReportData] == nil)
         NSDictionary *dict1 = @{@"CRASH_REPORT_ID" : @"crash_report_id"}; 
        
         NSArray * arrayOfDicts = @[dict1];
+        [[NotifyManager sharedManager] setEvents:arrayOfDicts];
         if ([NSJSONSerialization isValidJSONObject:arrayOfDicts]) 
 {
             NSError *error;
