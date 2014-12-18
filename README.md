@@ -101,8 +101,19 @@ Once the permissions are set, we can change the code as shown below.
 ####2. Add
 ```
   [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
-  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourAppID"
-key:@"yourSecretKey"];
+  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourAppID" key:@"yourSecretKey"];
+  
+  if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        
+    } else
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    }
+
 ```
 
 To the method
@@ -161,9 +172,9 @@ to the method
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 ```
 
-####6. Add
+####7. Add
 ```
-    [[NotifyManager sharedManager] sendEventsOnFocusLose];
+    [[NotifyManager sharedManager] didLoseFocus];
 
 ```
 to the method
@@ -184,19 +195,7 @@ Pass the Unique System User ID and Email Id to our SDK. This data will be used t
  NSString* isFirstTimeInstall = @"isFirstTimeInstall";
  if([preferences objectForKey: isFirstTimeInstall] == nil)
     {
-        NSDictionary *dict1 = @{@"USERID" : @"user_id"};
-        NSDictionary *dict2 = @{@"EMAILID" : @"email_id"};
-        NSArray * arrayOfDicts = @[dict1,dict2];
-        [[NotifyManager sharedManager] setEvents:arrayOfDicts];
-        if ([NSJSONSerialization isValidJSONObject:arrayOfDicts]) 
-        {
-            NSError *error;
-            NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfDicts options:0 error:&error];
-            NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
-            [[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];
-            
-        }
-        
+        [[NotifyManager sharedManager] identify:@"userId" traits:@{ @"name": @"User_Name",@"email": @"user@xyz.com" }];
     }
     else
     {
@@ -225,19 +224,7 @@ NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
 NSString* isFirstSourceData = @"isFirstSourceData";
 if([preferences objectForKey: isFirstSourceData] == nil)
     {
-        NSDictionary *dict1 = @{@"SOURCEDATA" : @"ad_channel_API_KEY"}; // via 3rd party         
-       NSDictionary *dict2 = @{@"SOURCEDATA" : NULL};
-        NSArray * arrayOfDicts = @[dict1,dict2];
-        [[NotifyManager sharedManager] setEvents:arrayOfDicts];
-        if ([NSJSONSerialization isValidJSONObject:arrayOfDicts]) 
-        {
-            NSError *error;
-            NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfDicts options:0 error:&error];
-            NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
-            [[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];
-            
-        }
-        
+        [[NotifyManager sharedManager] track:@"eventName" properties:@{ @"SOURCEDATA": @"ad_channel_API_KEY" }];
     }
     else
     {
@@ -263,16 +250,7 @@ In case you do not use any 3rd party platform or the platform doesn’t support 
 
 
 ```
-NSDictionary *dict1 = @{@"Event-Name" : @"Event-Value"};     NSDictionary *dict2 = @{@"IDSync" : @"ABC1234"};      
-NSArray * arrayOfDicts = @[dict1,dict2];     
-[[NotifyManager sharedManager] setEvents:arrayOfDicts];
-if ([NSJSONSerialization isValidJSONObject:arrayOfDicts])  
-//can it converted to valid json.     
-{         
-NSError *error;         
-NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfDicts options:0 error:&error];        
- NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];         
-[[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];      }
+ [[NotifyManager sharedManager] track:@"eventName"  properties:@{ @"eventValue": @"Event-Value",@"IDSync": @"ABC1234"}];
 
 ```
 
@@ -284,19 +262,7 @@ NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
 NSString* isFirstReportData = @"isFirstReportData";
 if([preferences objectForKey: isFirstReportData] == nil)
     {
-        NSDictionary *dict1 = @{@"CRASH_REPORT_ID" : @"crash_report_id"}; 
-       
-        NSArray * arrayOfDicts = @[dict1];
-        [[NotifyManager sharedManager] setEvents:arrayOfDicts];
-        if ([NSJSONSerialization isValidJSONObject:arrayOfDicts]) 
-{
-            NSError *error;
-            NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfDicts options:0 error:&error];
-            NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
-            [[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];
-            
-        }
-        
+        [[NotifyManager sharedManager] track:@"crashReport" properties:@{ @"CRASH_REPORT_ID": @"crash_report_id" }];
     }
     else
     {
