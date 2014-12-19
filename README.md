@@ -57,7 +57,16 @@ b. Expand the **"Link Binary With Library"** pane.
 
 ![Alt text](/READMESCR/2b.png?raw=true)
 
-c. Click on the **'+'** button and select **"CoreLocation.framework"** and **"Ad.Support.framework"** and click "Add"
+c. Click on the **'+'** button and select
+  * **CoreLocation.framework**
+  * **CoreBluetooth.framework**
+  * **CoreTelephony.framework**
+  * **QuartzCore.framework**
+  * **Security.framework**
+  * **SystemConfiguration.framework**
+  * **Ad.Support.framework**
+   
+and click "Add"
 
 ![Alt text](/READMESCR/2c.png?raw=true)
 
