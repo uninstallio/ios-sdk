@@ -28,7 +28,7 @@
 
 //-(void) syncCluster;
 
--(void) syncClusterForLocationCoordinate:(CLLocationCoordinate2D)locationCoordinate completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
+-(void) syncClusterForLocationCoordinate:(CLLocationCoordinate2D)locationCoordinate source:(NSString *) source completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
 -(void) notifyClusterEnter:(CLRegion *)region completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
