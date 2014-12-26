@@ -10,7 +10,6 @@
 
 #import "NCViewController.h"
 #import "NotifyManager.h"
-#import <CoreLocation/CoreLocation.h>
 
 @implementation NCAppDelegate
 
@@ -27,9 +26,17 @@
     [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
     [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demopro" key:@"PNNe5wL2ANnD6pVUysJk"];
 
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeAlert |
-      UIRemoteNotificationTypeBadge |
-      UIRemoteNotificationTypeSound)];
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        
+    } else
+    {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    }
+    
 
     return YES;
 }
@@ -46,6 +53,7 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     //Starts Notify Services
+    [[NotifyManager sharedManager] didLoseFocus];
     NSLog(@"Going to background");
 
 }
@@ -54,20 +62,11 @@
 {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     //Stops notify services
-    NSLog(@"Starting notiphi services");
+    
+    NSLog(@"applicationWillEnterForeground");
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demopro" key:@"PNNe5wL2ANnD6pVUysJk"];
 
-    NSDictionary *dict1 = @{@"Event-Name" : @"Event-Value"};
-    NSDictionary *dict2 = @{@"IDSync" : @"ABC1234"};
-
-    NSArray * arrayOfJsons = @[dict1,dict2];
-    if ([NSJSONSerialization isValidJSONObject:arrayOfJsons])  //can it converted to valid json.
-    {
-        NSError *error;
-        NSData *json = [NSJSONSerialization dataWithJSONObject:arrayOfJsons options:0 error:&error];
-        NSString *jsonString = [[NSString alloc] initWithData:json encoding:NSUTF8StringEncoding];
-        [[NotifyManager sharedManager] sendEventsWithJSONString:jsonString];
-
-    }
+  
 
 
 }
@@ -75,6 +74,8 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+     [[NotifyManager sharedManager] identify:@"userId" traits:@{ @"name": @"User_Name",@"email": @"user@xyz.com" }];
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
