@@ -41,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		21BEAA2B191918CB0096A0E0 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNotifyManager.a; path = "../../../Library/Developer/Xcode/DerivedData/NotifySample-facjtzslligmfzdknsuphgopnjzm/Build/Products/Debug-iphoneos/libNotifyManager.a"; sourceTree = "<group>"; };
 		F14826941714166900D77C06 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F1861856167F4164003CE49E /* NotifySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotifySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F186185A167F4164003CE49E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -137,7 +136,6 @@
 				F280AB821A8B613200DC5900 /* CoreBluetooth.framework */,
 				F280AB831A8B613200DC5900 /* CoreTelephony.framework */,
 				F280AB841A8B613200DC5900 /* QuartzCore.framework */,
-				21BEAA2B191918CB0096A0E0 /* libNotifyManager.a */,
 				F186185A167F4164003CE49E /* UIKit.framework */,
 				F186185C167F4164003CE49E /* Foundation.framework */,
 				F186185E167F4164003CE49E /* CoreGraphics.framework */,
