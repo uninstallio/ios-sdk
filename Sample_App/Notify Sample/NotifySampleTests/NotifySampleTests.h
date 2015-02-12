@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 sample. All rights reserved.
 //
 
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
-@interface NotifySampleTests : SenTestCase
+@interface NotifySampleTests : XCTestCase
 
 @end

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		217F31A1192E099E00D0AF9F /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 217F319E192E098600D0AF9F /* libNotifyManager.a */; };
 		F14826951714166900D77C06 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F14826941714166900D77C06 /* Default-568h@2x.png */; };
 		F186185B167F4164003CE49E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185A167F4164003CE49E /* UIKit.framework */; };
 		F186185D167F4164003CE49E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185C167F4164003CE49E /* Foundation.framework */; };
@@ -17,29 +16,21 @@
 		F186186B167F4164003CE49E /* NCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F186186A167F4164003CE49E /* NCAppDelegate.m */; };
 		F186186E167F4164003CE49E /* NCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F186186D167F4164003CE49E /* NCViewController.m */; };
 		F1861871167F4164003CE49E /* NCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F186186F167F4164003CE49E /* NCViewController.xib */; };
-		F1861879167F4164003CE49E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1861878167F4164003CE49E /* SenTestingKit.framework */; };
 		F186187A167F4164003CE49E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185A167F4164003CE49E /* UIKit.framework */; };
 		F186187B167F4164003CE49E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185C167F4164003CE49E /* Foundation.framework */; };
 		F1861883167F4164003CE49E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1861881167F4164003CE49E /* InfoPlist.strings */; };
 		F1861886167F4164003CE49E /* NotifySampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1861885167F4164003CE49E /* NotifySampleTests.m */; };
 		F186189D167F42E7003CE49E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186189C167F42E7003CE49E /* CoreLocation.framework */; };
+		F280AB811A8B610700DC5900 /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB801A8B610700DC5900 /* libNotifyManager.a */; };
+		F280AB851A8B613200DC5900 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB821A8B613200DC5900 /* CoreBluetooth.framework */; };
+		F280AB861A8B613200DC5900 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB831A8B613200DC5900 /* CoreTelephony.framework */; };
+		F280AB871A8B613200DC5900 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB841A8B613200DC5900 /* QuartzCore.framework */; };
+		F280AB891A8B613800DC5900 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB881A8B613800DC5900 /* AdSupport.framework */; };
+		F280AB8B1A8B614400DC5900 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */; };
+		F280AB8D1A8B614800DC5900 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8C1A8B614800DC5900 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		217F319D192E098600D0AF9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 217F3198192E098600D0AF9F /* NotifyManager.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F18B1927161B172200F9534C;
-			remoteInfo = NotifyManager;
-		};
-		217F319F192E099800D0AF9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 217F3198192E098600D0AF9F /* NotifyManager.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F18B1926161B172200F9534C;
-			remoteInfo = NotifyManager;
-		};
 		F186187C167F4164003CE49E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F186184D167F4164003CE49E /* Project object */;
@@ -50,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		217F3198192E098600D0AF9F /* NotifyManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NotifyManager.xcodeproj; path = "../../../Notify-iPhone/NotifyManager.xcodeproj"; sourceTree = "<group>"; };
 		21BEAA2B191918CB0096A0E0 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNotifyManager.a; path = "../../../Library/Developer/Xcode/DerivedData/NotifySample-facjtzslligmfzdknsuphgopnjzm/Build/Products/Debug-iphoneos/libNotifyManager.a"; sourceTree = "<group>"; };
 		F14826941714166900D77C06 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F1861856167F4164003CE49E /* NotifySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NotifySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,13 +56,22 @@
 		F186186C167F4164003CE49E /* NCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCViewController.h; sourceTree = "<group>"; };
 		F186186D167F4164003CE49E /* NCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCViewController.m; sourceTree = "<group>"; };
 		F1861870167F4164003CE49E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NCViewController.xib; sourceTree = "<group>"; };
-		F1861877167F4164003CE49E /* NotifySampleTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotifySampleTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F1861878167F4164003CE49E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		F1861877167F4164003CE49E /* NotifySampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotifySampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1861880167F4164003CE49E /* NotifySampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NotifySampleTests-Info.plist"; sourceTree = "<group>"; };
 		F1861882167F4164003CE49E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F1861884167F4164003CE49E /* NotifySampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifySampleTests.h; sourceTree = "<group>"; };
 		F1861885167F4164003CE49E /* NotifySampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifySampleTests.m; sourceTree = "<group>"; };
 		F186189C167F42E7003CE49E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F280AB7D1A8B610700DC5900 /* NotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyManager.h; sourceTree = "<group>"; };
+		F280AB7E1A8B610700DC5900 /* NotifyRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRegionManager.h; sourceTree = "<group>"; };
+		F280AB7F1A8B610700DC5900 /* NotifyServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyServiceManager.h; sourceTree = "<group>"; };
+		F280AB801A8B610700DC5900 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNotifyManager.a; sourceTree = "<group>"; };
+		F280AB821A8B613200DC5900 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		F280AB831A8B613200DC5900 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		F280AB841A8B613200DC5900 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F280AB881A8B613800DC5900 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F280AB8C1A8B614800DC5900 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,10 +79,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				217F31A1192E099E00D0AF9F /* libNotifyManager.a in Frameworks */,
+				F280AB8D1A8B614800DC5900 /* Security.framework in Frameworks */,
+				F280AB8B1A8B614400DC5900 /* SystemConfiguration.framework in Frameworks */,
+				F280AB891A8B613800DC5900 /* AdSupport.framework in Frameworks */,
+				F280AB851A8B613200DC5900 /* CoreBluetooth.framework in Frameworks */,
+				F280AB861A8B613200DC5900 /* CoreTelephony.framework in Frameworks */,
+				F280AB871A8B613200DC5900 /* QuartzCore.framework in Frameworks */,
 				F186189D167F42E7003CE49E /* CoreLocation.framework in Frameworks */,
 				F186185B167F4164003CE49E /* UIKit.framework in Frameworks */,
 				F186185D167F4164003CE49E /* Foundation.framework in Frameworks */,
+				F280AB811A8B610700DC5900 /* libNotifyManager.a in Frameworks */,
 				F186185F167F4164003CE49E /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,7 +97,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1861879167F4164003CE49E /* SenTestingKit.framework in Frameworks */,
 				F186187A167F4164003CE49E /* UIKit.framework in Frameworks */,
 				F186187B167F4164003CE49E /* Foundation.framework in Frameworks */,
 			);
@@ -101,18 +105,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		217F3199192E098600D0AF9F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				217F319E192E098600D0AF9F /* libNotifyManager.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F186184B167F4164003CE49E = {
 			isa = PBXGroup;
 			children = (
-				217F3198192E098600D0AF9F /* NotifyManager.xcodeproj */,
+				F280AB7B1A8B610700DC5900 /* include */,
+				F280AB801A8B610700DC5900 /* libNotifyManager.a */,
 				F14826941714166900D77C06 /* Default-568h@2x.png */,
 				F186189C167F42E7003CE49E /* CoreLocation.framework */,
 				F1861860167F4164003CE49E /* NotifySample */,
@@ -126,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				F1861856167F4164003CE49E /* NotifySample.app */,
-				F1861877167F4164003CE49E /* NotifySampleTests.octest */,
+				F1861877167F4164003CE49E /* NotifySampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,11 +131,16 @@
 		F1861859167F4164003CE49E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F280AB8C1A8B614800DC5900 /* Security.framework */,
+				F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */,
+				F280AB881A8B613800DC5900 /* AdSupport.framework */,
+				F280AB821A8B613200DC5900 /* CoreBluetooth.framework */,
+				F280AB831A8B613200DC5900 /* CoreTelephony.framework */,
+				F280AB841A8B613200DC5900 /* QuartzCore.framework */,
 				21BEAA2B191918CB0096A0E0 /* libNotifyManager.a */,
 				F186185A167F4164003CE49E /* UIKit.framework */,
 				F186185C167F4164003CE49E /* Foundation.framework */,
 				F186185E167F4164003CE49E /* CoreGraphics.framework */,
-				F1861878167F4164003CE49E /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -186,6 +188,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F280AB7B1A8B610700DC5900 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				F280AB7C1A8B610700DC5900 /* NotifyManager */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		F280AB7C1A8B610700DC5900 /* NotifyManager */ = {
+			isa = PBXGroup;
+			children = (
+				F280AB7D1A8B610700DC5900 /* NotifyManager.h */,
+				F280AB7E1A8B610700DC5900 /* NotifyRegionManager.h */,
+				F280AB7F1A8B610700DC5900 /* NotifyServiceManager.h */,
+			);
+			path = NotifyManager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,7 +221,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				217F31A0192E099800D0AF9F /* PBXTargetDependency */,
 			);
 			name = NotifySample;
 			productName = NotifySample;
@@ -224,8 +243,8 @@
 			);
 			name = NotifySampleTests;
 			productName = NotifySampleTests;
-			productReference = F1861877167F4164003CE49E /* NotifySampleTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = F1861877167F4164003CE49E /* NotifySampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -234,7 +253,8 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = NC;
-				LastUpgradeCheck = 0460;
+				LastTestingUpgradeCheck = 0610;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = sample;
 				TargetAttributes = {
 					F1861855167F4164003CE49E = {
@@ -257,12 +277,6 @@
 			mainGroup = F186184B167F4164003CE49E;
 			productRefGroup = F1861857167F4164003CE49E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 217F3199192E098600D0AF9F /* Products */;
-					ProjectRef = 217F3198192E098600D0AF9F /* NotifyManager.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				F1861855167F4164003CE49E /* NotifySample */,
@@ -270,16 +284,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		217F319E192E098600D0AF9F /* libNotifyManager.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libNotifyManager.a;
-			remoteRef = 217F319D192E098600D0AF9F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F1861854167F4164003CE49E /* Resources */ = {
@@ -353,11 +357,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		217F31A0192E099800D0AF9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NotifyManager;
-			targetProxy = 217F319F192E099800D0AF9F /* PBXContainerItemProxy */;
-		};
 		F186187D167F4164003CE49E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F1861855167F4164003CE49E /* NotifySample */;
@@ -397,16 +396,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Mishra (5Q6F753QEV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alok Mishra (5Q6F753QEV)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -416,10 +418,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -428,20 +434,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Mishra (5Q6F753QEV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alok Mishra (5Q6F753QEV)";
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
@@ -454,7 +466,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Mishra (5Q6F753QEV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alok Mishra (5Q6F753QEV)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -465,13 +476,9 @@
 				GCC_PREFIX_HEADER = "NotifySample/NotifySample-Prefix.pch";
 				INFOPLIST_FILE = "NotifySample/NotifySample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/NotifySample/Libs/Notify Manager\"",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/NotifySample-facjtzslligmfzdknsuphgopnjzm/Build/Products/Debug-iphoneos",
-					"/Users/alokmishra/Notify-iPhone/build/Release-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4e49f377-401a-4090-9f23-9e0be9b8d4ab";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "/Users/alokmishra/Notify-iPhone/NotifyManager/**";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/alokmishra/Notify-iPhone/NotifyManager";
@@ -483,7 +490,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer: Alok Mishra (5Q6F753QEV)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Alok Mishra (5Q6F753QEV)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -494,13 +500,9 @@
 				GCC_PREFIX_HEADER = "NotifySample/NotifySample-Prefix.pch";
 				INFOPLIST_FILE = "NotifySample/NotifySample-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/NotifySample/Libs/Notify Manager\"",
-					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/NotifySample-facjtzslligmfzdknsuphgopnjzm/Build/Products/Debug-iphoneos",
-					"/Users/alokmishra/Notify-iPhone/build/Release-iphoneos",
-				);
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4e49f377-401a-4090-9f23-9e0be9b8d4ab";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "/Users/alokmishra/Notify-iPhone/NotifyManager/**";
 				WRAPPER_EXTENSION = app;
@@ -514,13 +516,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NotifySample/NotifySample-Prefix.pch";
 				INFOPLIST_FILE = "NotifySampleTests/NotifySampleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -531,13 +533,13 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "NotifySample/NotifySample-Prefix.pch";
 				INFOPLIST_FILE = "NotifySampleTests/NotifySampleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};

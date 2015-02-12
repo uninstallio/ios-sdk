@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <dispatch/dispatch.h>
 #import <CoreLocation/CoreLocation.h>
+#import <AdSupport/ASIdentifierManager.h>
 
 #include <sys/socket.h>
 #include <sys/sysctl.h>
@@ -27,7 +28,7 @@
 
 //-(void) syncCluster;
 
--(void) syncClusterForLocationCoordinate:(CLLocationCoordinate2D)locationCoordinate completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
+-(void) syncClusterForLocationCoordinate:(CLLocationCoordinate2D)locationCoordinate source:(NSString *) source completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
 -(void) notifyClusterEnter:(CLRegion *)region completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 

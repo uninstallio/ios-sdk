@@ -36,7 +36,21 @@
 -(BOOL) isAppLaunchedByNotifyService:(NSDictionary *)launchOptions;
 
 -(void) registerForPushNotificationUsingDeviceToken:(NSData *)deviceToken;
+
 -(void) sendEventsWithJSONString:(NSString *)jsonString;
 
+-(void) takeEventsArrayOnFocusLose:(NSArray *)arrayOfJsons;
+
+-(void) sendEventsOnFocusLose;
+
+-(void) setEvents:(NSArray *)eventsArray;
+
+-(void) flush;
+
+-(void) didLoseFocus;
+
+-(void) identify:(NSString *)userId traits:(NSDictionary *)traits;
+
+-(void) track:(NSString *)event properties:(NSDictionary *)properties;
 
 @end
