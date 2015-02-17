@@ -24,7 +24,7 @@
     
     //Check if the app was waken up by notify services
     [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demopro" key:@"PNNe5wL2ANnD6pVUysJk"];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"15b54c06a2034fffa1a5826e9f1ab7f9" key:@"ogTJVbqlNiyrY5J8//es5G8VJVgt1Mq/ADYPUuooCC1XgCBfqBsRCsqztNgLfamluKttIFjtV6Hp2hLweH+Dww=="];
 
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
     {
@@ -54,7 +54,7 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     //Starts Notify Services
     [[NotifyManager sharedManager] didLoseFocus];
-    NSLog(@"Going to background");
+//    NSLog(@"Going to background");
 
 }
 
@@ -64,7 +64,7 @@
     //Stops notify services
     
     NSLog(@"applicationWillEnterForeground");
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demopro" key:@"PNNe5wL2ANnD6pVUysJk"];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"15b54c06a2034fffa1a5826e9f1ab7f9" key:@"ogTJVbqlNiyrY5J8//es5G8VJVgt1Mq/ADYPUuooCC1XgCBfqBsRCsqztNgLfamluKttIFjtV6Hp2hLweH+Dww=="];
 
   
 
@@ -85,13 +85,13 @@
 
 
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-    NSLog(@"Registerd for push with device token: %@",deviceToken);
+//    NSLog(@"Registerd for push with device token: %@",deviceToken);
     [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
 }
 
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    NSLog(@"Inside timed background fetch \n");
+//    NSLog(@"Inside timed background fetch \n");
     [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demopro" key:@"PNNe5wL2ANnD6pVUysJk"];
     completionHandler(UIBackgroundFetchResultNoData);
 }
