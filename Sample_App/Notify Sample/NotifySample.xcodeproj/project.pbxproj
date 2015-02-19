@@ -21,13 +21,13 @@
 		F1861883167F4164003CE49E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F1861881167F4164003CE49E /* InfoPlist.strings */; };
 		F1861886167F4164003CE49E /* NotifySampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1861885167F4164003CE49E /* NotifySampleTests.m */; };
 		F186189D167F42E7003CE49E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186189C167F42E7003CE49E /* CoreLocation.framework */; };
+		F26164381A9610720019B15C /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F26164371A9610720019B15C /* libNotifyManager.a */; };
 		F280AB851A8B613200DC5900 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB821A8B613200DC5900 /* CoreBluetooth.framework */; };
 		F280AB861A8B613200DC5900 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB831A8B613200DC5900 /* CoreTelephony.framework */; };
 		F280AB871A8B613200DC5900 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB841A8B613200DC5900 /* QuartzCore.framework */; };
 		F280AB891A8B613800DC5900 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB881A8B613800DC5900 /* AdSupport.framework */; };
 		F280AB8B1A8B614400DC5900 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */; };
 		F280AB8D1A8B614800DC5900 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8C1A8B614800DC5900 /* Security.framework */; };
-		F287965A1A9368F700C3FF8E /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F28796591A9368F700C3FF8E /* libNotifyManager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,16 +61,16 @@
 		F1861884167F4164003CE49E /* NotifySampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifySampleTests.h; sourceTree = "<group>"; };
 		F1861885167F4164003CE49E /* NotifySampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifySampleTests.m; sourceTree = "<group>"; };
 		F186189C167F42E7003CE49E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F26164341A9610720019B15C /* NotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyManager.h; sourceTree = "<group>"; };
+		F26164351A9610720019B15C /* NotifyRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRegionManager.h; sourceTree = "<group>"; };
+		F26164361A9610720019B15C /* NotifyServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyServiceManager.h; sourceTree = "<group>"; };
+		F26164371A9610720019B15C /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNotifyManager.a; sourceTree = "<group>"; };
 		F280AB821A8B613200DC5900 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		F280AB831A8B613200DC5900 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F280AB841A8B613200DC5900 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F280AB881A8B613800DC5900 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F280AB8C1A8B614800DC5900 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F28796561A9368F700C3FF8E /* NotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyManager.h; sourceTree = "<group>"; };
-		F28796571A9368F700C3FF8E /* NotifyRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRegionManager.h; sourceTree = "<group>"; };
-		F28796581A9368F700C3FF8E /* NotifyServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyServiceManager.h; sourceTree = "<group>"; };
-		F28796591A9368F700C3FF8E /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNotifyManager.a; path = "../../Builds/All-Targets-armv6-armv7-simulator/libNotifyManager.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 			files = (
 				F280AB8D1A8B614800DC5900 /* Security.framework in Frameworks */,
 				F280AB8B1A8B614400DC5900 /* SystemConfiguration.framework in Frameworks */,
-				F287965A1A9368F700C3FF8E /* libNotifyManager.a in Frameworks */,
+				F26164381A9610720019B15C /* libNotifyManager.a in Frameworks */,
 				F280AB891A8B613800DC5900 /* AdSupport.framework in Frameworks */,
 				F280AB851A8B613200DC5900 /* CoreBluetooth.framework in Frameworks */,
 				F280AB861A8B613200DC5900 /* CoreTelephony.framework in Frameworks */,
@@ -107,8 +107,8 @@
 		F186184B167F4164003CE49E = {
 			isa = PBXGroup;
 			children = (
-				F28796541A9368F700C3FF8E /* include */,
-				F28796591A9368F700C3FF8E /* libNotifyManager.a */,
+				F26164321A9610720019B15C /* include */,
+				F26164371A9610720019B15C /* libNotifyManager.a */,
 				F14826941714166900D77C06 /* Default-568h@2x.png */,
 				F186189C167F42E7003CE49E /* CoreLocation.framework */,
 				F1861860167F4164003CE49E /* NotifySample */,
@@ -186,21 +186,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F28796541A9368F700C3FF8E /* include */ = {
+		F26164321A9610720019B15C /* include */ = {
 			isa = PBXGroup;
 			children = (
-				F28796551A9368F700C3FF8E /* NotifyManager */,
+				F26164331A9610720019B15C /* NotifyManager */,
 			);
-			name = include;
-			path = "../../Builds/All-Targets-armv6-armv7-simulator/include";
+			path = include;
 			sourceTree = "<group>";
 		};
-		F28796551A9368F700C3FF8E /* NotifyManager */ = {
+		F26164331A9610720019B15C /* NotifyManager */ = {
 			isa = PBXGroup;
 			children = (
-				F28796561A9368F700C3FF8E /* NotifyManager.h */,
-				F28796571A9368F700C3FF8E /* NotifyRegionManager.h */,
-				F28796581A9368F700C3FF8E /* NotifyServiceManager.h */,
+				F26164341A9610720019B15C /* NotifyManager.h */,
+				F26164351A9610720019B15C /* NotifyRegionManager.h */,
+				F26164361A9610720019B15C /* NotifyServiceManager.h */,
 			);
 			path = NotifyManager;
 			sourceTree = "<group>";
@@ -481,7 +480,7 @@
 					"/Users/aravind/Documents/Aravind/uninstall/SDK/Builds/All-Targets-armv6-armv7-simulator",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4e49f377-401a-4090-9f23-9e0be9b8d4ab";
+				PROVISIONING_PROFILE = "226ef199-8dd3-4e27-94ba-07676bbc7756";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "/Users/alokmishra/Notify-iPhone/NotifyManager/**";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/alokmishra/Notify-iPhone/NotifyManager";
@@ -509,7 +508,7 @@
 					"/Users/aravind/Documents/Aravind/uninstall/SDK/Builds/All-Targets-armv6-armv7-simulator",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "4e49f377-401a-4090-9f23-9e0be9b8d4ab";
+				PROVISIONING_PROFILE = "226ef199-8dd3-4e27-94ba-07676bbc7756";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "/Users/alokmishra/Notify-iPhone/NotifyManager/**";
 				WRAPPER_EXTENSION = app;

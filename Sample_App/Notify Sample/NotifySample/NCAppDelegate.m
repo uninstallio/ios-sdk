@@ -66,15 +66,12 @@
     NSLog(@"applicationWillEnterForeground");
     [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"15b54c06a2034fffa1a5826e9f1ab7f9" key:@"ogTJVbqlNiyrY5J8//es5G8VJVgt1Mq/ADYPUuooCC1XgCBfqBsRCsqztNgLfamluKttIFjtV6Hp2hLweH+Dww=="];
 
-  
-
-
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-     [[NotifyManager sharedManager] identify:@"userId" traits:@{ @"name": @"User_Name",@"email": @"user@xyz.com" }];
+//    [[NotifyManager sharedManager] identify:@"userId" traits:@{@"name":@"aravind",@"email":@"aravind@notiphi.com"}];
     
 }
 
@@ -84,15 +81,21 @@
 }
 
 
--(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken{
-//    NSLog(@"Registerd for push with device token: %@",deviceToken);
+-(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
     [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
+}
+
+
+- (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
+{
+    [[NotifyManager sharedManager] processRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
 }
 
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-//    NSLog(@"Inside timed background fetch \n");
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"demopro" key:@"PNNe5wL2ANnD6pVUysJk"];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"15b54c06a2034fffa1a5826e9f1ab7f9" key:@"ogTJVbqlNiyrY5J8//es5G8VJVgt1Mq/ADYPUuooCC1XgCBfqBsRCsqztNgLfamluKttIFjtV6Hp2hLweH+Dww=="];
     completionHandler(UIBackgroundFetchResultNoData);
 }
 @end
