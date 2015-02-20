@@ -63,7 +63,7 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     //Stops notify services
     
-    NSLog(@"applicationWillEnterForeground");
+//    NSLog(@"applicationWillEnterForeground");
     [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"15b54c06a2034fffa1a5826e9f1ab7f9" key:@"ogTJVbqlNiyrY5J8//es5G8VJVgt1Mq/ADYPUuooCC1XgCBfqBsRCsqztNgLfamluKttIFjtV6Hp2hLweH+Dww=="];
 
 }
