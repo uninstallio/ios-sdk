@@ -329,4 +329,4 @@ The certificate file is ready. Please email it to us.
 
 Having trouble with integration? Please contact us at **[dev-support@notiphi.com] [1]** and we’ll help you sort it out in a jiffy.
 
-[1]: mailto:dev-support@notiphi.com        "dev-support@notiphi.com"
+[1]: mailto:dev-support@notiphi.com        "ios-dev-support@uninstall.io"

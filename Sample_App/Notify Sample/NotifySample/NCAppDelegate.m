@@ -24,7 +24,7 @@
     
     //Check if the app was waken up by notify services
     [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"15b54c06a2034fffa1a5826e9f1ab7f9" key:@"ogTJVbqlNiyrY5J8//es5G8VJVgt1Mq/ADYPUuooCC1XgCBfqBsRCsqztNgLfamluKttIFjtV6Hp2hLweH+Dww=="];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"0e770c954e5c4c1a880f939289444cc4" key:@"K/CNA41vx7izcTPwG3dV2TbwfQVZf+9728214QAFp3dU7Z331Y9vlvAZpfzrHBEqS7/kafytLJ0Y+B4mfZmR8w=="];
 
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
     {
@@ -64,7 +64,7 @@
     //Stops notify services
     
 //    NSLog(@"applicationWillEnterForeground");
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"15b54c06a2034fffa1a5826e9f1ab7f9" key:@"ogTJVbqlNiyrY5J8//es5G8VJVgt1Mq/ADYPUuooCC1XgCBfqBsRCsqztNgLfamluKttIFjtV6Hp2hLweH+Dww=="];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"0e770c954e5c4c1a880f939289444cc4" key:@"K/CNA41vx7izcTPwG3dV2TbwfQVZf+9728214QAFp3dU7Z331Y9vlvAZpfzrHBEqS7/kafytLJ0Y+B4mfZmR8w=="];
 
 }
 
@@ -95,7 +95,7 @@
 
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"15b54c06a2034fffa1a5826e9f1ab7f9" key:@"ogTJVbqlNiyrY5J8//es5G8VJVgt1Mq/ADYPUuooCC1XgCBfqBsRCsqztNgLfamluKttIFjtV6Hp2hLweH+Dww=="];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"0e770c954e5c4c1a880f939289444cc4" key:@"K/CNA41vx7izcTPwG3dV2TbwfQVZf+9728214QAFp3dU7Z331Y9vlvAZpfzrHBEqS7/kafytLJ0Y+B4mfZmR8w=="];
     completionHandler(UIBackgroundFetchResultNoData);
 }
 @end
