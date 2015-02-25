@@ -327,6 +327,6 @@ The certificate file is ready. Please email it to us.
 
 ### Support or Contact
 
-Having trouble with integration? Please contact us at **[dev-support@notiphi.com] [1]** and we’ll help you sort it out in a jiffy.
+Having trouble with integration? Please contact us at **[ios-dev-support@uninstall.io] [1]** and we’ll help you sort it out in a jiffy.
 
 [1]: mailto:dev-support@notiphi.com        "ios-dev-support@uninstall.io"
