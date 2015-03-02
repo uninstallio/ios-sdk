@@ -12,10 +12,10 @@ This guide will provide you step by step details on how to integrate the SDK in 
 * [Configure libraries and permissions in the project\.](#configure-libraries-and-permissions-in-the-project)
 * [Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
 * [Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
-  * Unique System User ID and Email ID.
-  * Install Source.
-  * App Events.
-  * Crash Events
+  * [Unique System User ID and Email ID\.](#1-unique-system-user-id-and-email-id)
+  * [Install Source\.](#2-install-source)
+  * [App Events\.](#3-app-events)
+  * [Crash Events](#4-crash-events)
 * [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
 
 
