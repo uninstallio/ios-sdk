@@ -110,7 +110,7 @@ Once the permissions are set, we can change the code as shown below.
 ####2. Add
 ```
   [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
-  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourAppID" key:@"yourSecretKey"];
+  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"appToken" key:@"appSecret"];
   
   if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
     {
@@ -132,12 +132,14 @@ To the method
 (NSDictionary *)launchOptions
 ```
 
-In your app delegate. yourAppID and yourSecretKey will be provided by us on registration with us.
+In your app delegate. 
+
+Note: If you do not have the token and secret then please drop a mail to **[ios-dev-support@uninstall.io] [1]** to get these credentials for your app.
 
 ####3. Add
 ```
-  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourAppID"
-key:@"yourSecretKey"];
+  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"appToken"
+key:@"appSecret"];
 ```
 
 To the method
@@ -172,7 +174,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 ```
 ####6. Add
 ```
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourAppID" key:@"yourSecretKey"];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"appToken" key:@"appSecret"];
     completionHandler(UIBackgroundFetchResultNoData);
 
 ```
