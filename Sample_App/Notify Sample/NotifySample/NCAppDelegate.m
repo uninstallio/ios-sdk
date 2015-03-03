@@ -6,6 +6,10 @@
 //  Copyright (c) 2012 sample. All rights reserved.
 //
 
+
+#define kNotifyAPPID    @"0e770c954e5c4c1a880f939289444cc4"
+#define kNotifySecretKey      @"K/CNA41vx7izcTPwG3dV2TbwfQVZf+9728214QAFp3dU7Z331Y9vlvAZpfzrHBEqS7/kafytLJ0Y+B4mfZmR8w=="
+
 #import "NCAppDelegate.h"
 
 #import "NCViewController.h"
@@ -24,13 +28,13 @@
     
     //Check if the app was waken up by notify services
     [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"0e770c954e5c4c1a880f939289444cc4" key:@"K/CNA41vx7izcTPwG3dV2TbwfQVZf+9728214QAFp3dU7Z331Y9vlvAZpfzrHBEqS7/kafytLJ0Y+B4mfZmR8w=="];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
 
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
     {
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert) categories:nil];
         [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
-        [[UIApplication sharedApplication] registerForRemoteNotifications];
+//        [[UIApplication sharedApplication] registerForRemoteNotifications];
         
     } else
     {
@@ -64,7 +68,7 @@
     //Stops notify services
     
 //    NSLog(@"applicationWillEnterForeground");
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"0e770c954e5c4c1a880f939289444cc4" key:@"K/CNA41vx7izcTPwG3dV2TbwfQVZf+9728214QAFp3dU7Z331Y9vlvAZpfzrHBEqS7/kafytLJ0Y+B4mfZmR8w=="];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
 
 }
 
@@ -80,12 +84,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void) application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    [application registerForRemoteNotifications];
+}
 
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
 }
-
 
 - (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
@@ -95,7 +102,7 @@
 
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"0e770c954e5c4c1a880f939289444cc4" key:@"K/CNA41vx7izcTPwG3dV2TbwfQVZf+9728214QAFp3dU7Z331Y9vlvAZpfzrHBEqS7/kafytLJ0Y+B4mfZmR8w=="];
+    [[NotifyManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
     completionHandler(UIBackgroundFetchResultNoData);
 }
 @end
