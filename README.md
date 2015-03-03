@@ -110,7 +110,7 @@ Once the permissions are set, we can change the code as shown below.
 ####2. Add
 ```
   [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
-  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourAppID" key:@"yourSecretKey"];
+  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"yourToken" key:@"yourSecret"];
   
   if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
     {
