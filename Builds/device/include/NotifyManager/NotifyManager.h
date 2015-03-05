@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreLocation/CoreLocation.h>
 
 /*
  * Notify Manager is the singleton object responsible for handling notify operations and events
  */
 
-@interface NotifyManager : NSObject<CLLocationManagerDelegate,UIAlertViewDelegate>{
+@interface NotifyManager : NSObject<UIAlertViewDelegate>{
 
 }
 

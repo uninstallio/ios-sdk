@@ -24,7 +24,7 @@
     self.viewController = [[NCViewController alloc] initWithNibName:@"NCViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
+    application.applicationIconBadgeNumber = 0;
     
     //Check if the app was waken up by notify services
     [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
@@ -68,6 +68,7 @@
     //Stops notify services
     
 //    NSLog(@"applicationWillEnterForeground");
+    application.applicationIconBadgeNumber = 0;
     [[NotifyManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
 
 }

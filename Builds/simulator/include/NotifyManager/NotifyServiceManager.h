@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import <dispatch/dispatch.h>
-#import <CoreLocation/CoreLocation.h>
 #import <AdSupport/ASIdentifierManager.h>
 
 #include <sys/socket.h>
@@ -28,13 +27,7 @@
 
 //-(void) syncCluster;
 
--(void) syncClusterForLocationCoordinate:(CLLocationCoordinate2D)locationCoordinate source:(NSString *) source completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
-
--(void) notifyClusterEnter:(CLRegion *)region completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
-
--(void) notifyClusterExit:(CLRegion *)region completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
-
--(void) notifyUserDidClickedNotificationWithOfferID:(NSString *)offerID completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
+-(void) syncClusterForLocationCoordinate:(NSDictionary *)locationCoordinate source:(NSString *) source completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
 -(void) registerAppWithAppID:(NSString *)appID enroll:(BOOL)enrolled onCompletion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
@@ -43,8 +36,6 @@
 -(void) setOperationCancelledStatus:(BOOL)cancelStatus;
 
 -(void) registerForPushNotificationWithDeviceToken:(NSString *)deviceTokenStr completion:(void(^)(NSString *rsponseString))completion failed:(void(^)(NSError *erro))failed;
-
--(void) getPromoForNotificationID:(NSString *)notificationID completion:(void(^)(NSString *responseString))completion failed:(void(^)(NSError *error))failed;
 
 -(void) sendEventsWithJson:(NSString *)eventJsonStr completion:(void(^)(NSString *rsponseString))completion failed:(void(^)(NSError *erro))failed;
 
