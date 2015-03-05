@@ -26,7 +26,7 @@
 		F280AB891A8B613800DC5900 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB881A8B613800DC5900 /* AdSupport.framework */; };
 		F280AB8B1A8B614400DC5900 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */; };
 		F280AB8D1A8B614800DC5900 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8C1A8B614800DC5900 /* Security.framework */; };
-		F2A8B4F61A9F1A310057B0E8 /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F200D6DF1A9D9EC70046B9E4 /* libNotifyManager.a */; };
+		F2C3905D1AA82C5A00689750 /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C3905C1AA82C5A00689750 /* libNotifyManager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,16 +60,16 @@
 		F1861884167F4164003CE49E /* NotifySampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifySampleTests.h; sourceTree = "<group>"; };
 		F1861885167F4164003CE49E /* NotifySampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifySampleTests.m; sourceTree = "<group>"; };
 		F186189C167F42E7003CE49E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		F200D6DC1A9D9EC70046B9E4 /* NotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyManager.h; sourceTree = "<group>"; };
-		F200D6DD1A9D9EC70046B9E4 /* NotifyRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRegionManager.h; sourceTree = "<group>"; };
-		F200D6DE1A9D9EC70046B9E4 /* NotifyServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyServiceManager.h; sourceTree = "<group>"; };
-		F200D6DF1A9D9EC70046B9E4 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNotifyManager.a; path = "../../Builds/All-Targets-armv6-armv7-simulator/libNotifyManager.a"; sourceTree = "<group>"; };
 		F280AB821A8B613200DC5900 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		F280AB831A8B613200DC5900 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F280AB841A8B613200DC5900 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F280AB881A8B613800DC5900 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F280AB8C1A8B614800DC5900 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		F2C390591AA82C5A00689750 /* NotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyManager.h; sourceTree = "<group>"; };
+		F2C3905A1AA82C5A00689750 /* NotifyRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRegionManager.h; sourceTree = "<group>"; };
+		F2C3905B1AA82C5A00689750 /* NotifyServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyServiceManager.h; sourceTree = "<group>"; };
+		F2C3905C1AA82C5A00689750 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNotifyManager.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			files = (
 				F280AB8D1A8B614800DC5900 /* Security.framework in Frameworks */,
 				F280AB8B1A8B614400DC5900 /* SystemConfiguration.framework in Frameworks */,
-				F2A8B4F61A9F1A310057B0E8 /* libNotifyManager.a in Frameworks */,
+				F2C3905D1AA82C5A00689750 /* libNotifyManager.a in Frameworks */,
 				F280AB891A8B613800DC5900 /* AdSupport.framework in Frameworks */,
 				F280AB851A8B613200DC5900 /* CoreBluetooth.framework in Frameworks */,
 				F280AB861A8B613200DC5900 /* CoreTelephony.framework in Frameworks */,
@@ -106,8 +106,8 @@
 		F186184B167F4164003CE49E = {
 			isa = PBXGroup;
 			children = (
-				F200D6DA1A9D9EC70046B9E4 /* include */,
-				F200D6DF1A9D9EC70046B9E4 /* libNotifyManager.a */,
+				F2C390571AA82C5A00689750 /* include */,
+				F2C3905C1AA82C5A00689750 /* libNotifyManager.a */,
 				F14826941714166900D77C06 /* Default-568h@2x.png */,
 				F186189C167F42E7003CE49E /* CoreLocation.framework */,
 				F1861860167F4164003CE49E /* NotifySample */,
@@ -185,21 +185,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F200D6DA1A9D9EC70046B9E4 /* include */ = {
+		F2C390571AA82C5A00689750 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				F200D6DB1A9D9EC70046B9E4 /* NotifyManager */,
+				F2C390581AA82C5A00689750 /* NotifyManager */,
 			);
-			name = include;
-			path = "../../Builds/All-Targets-armv6-armv7-simulator/include";
+			path = include;
 			sourceTree = "<group>";
 		};
-		F200D6DB1A9D9EC70046B9E4 /* NotifyManager */ = {
+		F2C390581AA82C5A00689750 /* NotifyManager */ = {
 			isa = PBXGroup;
 			children = (
-				F200D6DC1A9D9EC70046B9E4 /* NotifyManager.h */,
-				F200D6DD1A9D9EC70046B9E4 /* NotifyRegionManager.h */,
-				F200D6DE1A9D9EC70046B9E4 /* NotifyServiceManager.h */,
+				F2C390591AA82C5A00689750 /* NotifyManager.h */,
+				F2C3905A1AA82C5A00689750 /* NotifyRegionManager.h */,
+				F2C3905B1AA82C5A00689750 /* NotifyServiceManager.h */,
 			);
 			path = NotifyManager;
 			sourceTree = "<group>";
@@ -478,7 +477,7 @@
 					"/Users/Aravind/Documents/Development/iOS/Uninstall/SDK/Builds/All-Targets-armv6-armv7-simulator",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "48c16c72-886e-44c0-a62f-25d66447e028";
+				PROVISIONING_PROFILE = "83ba32a9-5098-4cac-99a9-6fa943e8dba4";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "/Users/alokmishra/Notify-iPhone/NotifyManager/**";
 				"USER_HEADER_SEARCH_PATHS[arch=*]" = "/Users/alokmishra/Notify-iPhone/NotifyManager";
@@ -505,7 +504,7 @@
 					"/Users/Aravind/Documents/Development/iOS/Uninstall/SDK/Builds/All-Targets-armv6-armv7-simulator",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "48c16c72-886e-44c0-a62f-25d66447e028";
+				PROVISIONING_PROFILE = "83ba32a9-5098-4cac-99a9-6fa943e8dba4";
 				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "/Users/alokmishra/Notify-iPhone/NotifyManager/**";
 				WRAPPER_EXTENSION = app;
