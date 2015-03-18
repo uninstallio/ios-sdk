@@ -34,8 +34,8 @@
 		<string>location-services</string>
 		<string>armv7</string>
 	</array>
-	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Let us know where you are whenever</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Let us know where you are</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

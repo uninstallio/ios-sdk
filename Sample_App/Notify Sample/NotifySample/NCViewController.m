@@ -11,7 +11,9 @@
 #import <CommonCrypto/CommonHMAC.h>
 
 
-@interface NCViewController ()
+@interface NCViewController ()<CLLocationManagerDelegate>
+
+@property (nonatomic)  CLLocationManager *manager;
 
 @end
 
@@ -21,8 +23,19 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
 }
 
+- (IBAction)enableLocation
+{
+    _manager = [[CLLocationManager alloc] init];
+    _manager.delegate = self;
+    if ([_manager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+    {
+        [_manager requestWhenInUseAuthorization];
+    }
+    [_manager startUpdatingLocation];
+}
 
 -(void) viewDidAppear:(BOOL)animated{
     //CLLocationManager *manager=[[CLLocationManager alloc] init];
