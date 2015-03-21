@@ -7,8 +7,8 @@
 //
 
 
-#define kNotifyAPPID        @"0e770c954e5c4c1a880f939289444cc4"
-#define kNotifySecretKey    @"K/CNA41vx7izcTPwG3dV2TbwfQVZf+9728214QAFp3dU7Z331Y9vlvAZpfzrHBEqS7/kafytLJ0Y+B4mfZmR8w=="
+#define kNotifyAPPID        @"169e640ca23146b8b70c81248da504dd"
+#define kNotifySecretKey    @"iCvyrxJj1cpJ1gYGo2vwlFBt1RE9rdsD0dL6NcOo8/RooHnRceycD2pUMpEmBCV21sIoEZvD+4pOxJqfgGhkrA=="
 
 #import "NCAppDelegate.h"
 
