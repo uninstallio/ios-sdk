@@ -69,7 +69,6 @@
     
 //    NSLog(@"applicationWillEnterForeground");
     [[NotifyManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
-
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
