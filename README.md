@@ -25,7 +25,7 @@ This guide will provide you step by step details on how to integrate the SDK in 
 Clone this repository
 
 ```
-git clone https://github.com/alokmishra/notiphi-iphone-sdk.git
+git clone https://github.com/uninstallio/ios-sdk.git
 ```
 
 or download the zipped package.
