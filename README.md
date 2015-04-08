@@ -31,7 +31,7 @@ git clone https://github.com/uninstallio/ios-sdk.git
 or download the zipped package.
 
 ```
-wget https://github.com/alokmishra/notiphi-iphone-sdk/archive/master.zip
+wget https://github.com/uninstallio/ios-sdk/archive/master.zip
 ```
 Unzip the files (if downloaded as a zip).
 
