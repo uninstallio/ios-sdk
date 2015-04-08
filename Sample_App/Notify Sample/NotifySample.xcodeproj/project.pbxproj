@@ -19,7 +19,7 @@
 		F186187A167F4164003CE49E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185A167F4164003CE49E /* UIKit.framework */; };
 		F186187B167F4164003CE49E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185C167F4164003CE49E /* Foundation.framework */; };
 		F1861886167F4164003CE49E /* NotifySampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1861885167F4164003CE49E /* NotifySampleTests.m */; };
-		F208AE761AA865ED00583144 /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F208AE751AA865ED00583144 /* libNotifyManager.a */; };
+		F277C8C21AD5440200620A97 /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F277C8C11AD5440200620A97 /* libNotifyManager.a */; };
 		F280AB851A8B613200DC5900 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB821A8B613200DC5900 /* CoreBluetooth.framework */; };
 		F280AB861A8B613200DC5900 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB831A8B613200DC5900 /* CoreTelephony.framework */; };
 		F280AB871A8B613200DC5900 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB841A8B613200DC5900 /* QuartzCore.framework */; };
@@ -58,10 +58,10 @@
 		F1861882167F4164003CE49E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F1861884167F4164003CE49E /* NotifySampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifySampleTests.h; sourceTree = "<group>"; };
 		F1861885167F4164003CE49E /* NotifySampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifySampleTests.m; sourceTree = "<group>"; };
-		F208AE721AA865ED00583144 /* NotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyManager.h; sourceTree = "<group>"; };
-		F208AE731AA865ED00583144 /* NotifyRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRegionManager.h; sourceTree = "<group>"; };
-		F208AE741AA865ED00583144 /* NotifyServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyServiceManager.h; sourceTree = "<group>"; };
-		F208AE751AA865ED00583144 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNotifyManager.a; sourceTree = "<group>"; };
+		F277C8BE1AD5440200620A97 /* NotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyManager.h; sourceTree = "<group>"; };
+		F277C8BF1AD5440200620A97 /* NotifyRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRegionManager.h; sourceTree = "<group>"; };
+		F277C8C01AD5440200620A97 /* NotifyServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyServiceManager.h; sourceTree = "<group>"; };
+		F277C8C11AD5440200620A97 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNotifyManager.a; sourceTree = "<group>"; };
 		F280AB821A8B613200DC5900 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		F280AB831A8B613200DC5900 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F280AB841A8B613200DC5900 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -83,7 +83,7 @@
 				F280AB871A8B613200DC5900 /* QuartzCore.framework in Frameworks */,
 				F186185B167F4164003CE49E /* UIKit.framework in Frameworks */,
 				F186185D167F4164003CE49E /* Foundation.framework in Frameworks */,
-				F208AE761AA865ED00583144 /* libNotifyManager.a in Frameworks */,
+				F277C8C21AD5440200620A97 /* libNotifyManager.a in Frameworks */,
 				F186185F167F4164003CE49E /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,8 +103,8 @@
 		F186184B167F4164003CE49E = {
 			isa = PBXGroup;
 			children = (
-				F208AE701AA865ED00583144 /* include */,
-				F208AE751AA865ED00583144 /* libNotifyManager.a */,
+				F277C8BC1AD5440200620A97 /* include */,
+				F277C8C11AD5440200620A97 /* libNotifyManager.a */,
 				F14826941714166900D77C06 /* Default-568h@2x.png */,
 				F1861860167F4164003CE49E /* NotifySample */,
 				F186187E167F4164003CE49E /* NotifySampleTests */,
@@ -181,20 +181,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F208AE701AA865ED00583144 /* include */ = {
+		F277C8BC1AD5440200620A97 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				F208AE711AA865ED00583144 /* NotifyManager */,
+				F277C8BD1AD5440200620A97 /* NotifyManager */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		F208AE711AA865ED00583144 /* NotifyManager */ = {
+		F277C8BD1AD5440200620A97 /* NotifyManager */ = {
 			isa = PBXGroup;
 			children = (
-				F208AE721AA865ED00583144 /* NotifyManager.h */,
-				F208AE731AA865ED00583144 /* NotifyRegionManager.h */,
-				F208AE741AA865ED00583144 /* NotifyServiceManager.h */,
+				F277C8BE1AD5440200620A97 /* NotifyManager.h */,
+				F277C8BF1AD5440200620A97 /* NotifyRegionManager.h */,
+				F277C8C01AD5440200620A97 /* NotifyServiceManager.h */,
 			);
 			path = NotifyManager;
 			sourceTree = "<group>";
