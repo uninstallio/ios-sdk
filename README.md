@@ -221,36 +221,7 @@ const BOOL didSave = [preferences synchronize];
 
 ```
 
-#####2) Install Source
-The Install source needs to be passed to our SDK. This is used to measure the Ad channels (especially Inorganic sources) performance. Information can be passed in two ways:
-
-#####a. Via 3rd party platform
-If you use any third party attribution platform and supports data extraction via API, then send us the API keys and we will directly extract the information from there. Please check with your product/marketing manager for details on 3rd party platform.
-
-#####b. Via the App
-In case you do not use any 3rd party platform or the platform doesn’t support any API then pass the data to our SDK via our event capturing feature This information has to be passed only once in the lifetime of the app during installation. Help code snippet below.
-
-```
-NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
-NSString* isFirstSourceData = @"isFirstSourceData";
-if([preferences objectForKey: isFirstSourceData] == nil)
-    {
-        [[NotifyManager sharedManager] track:@"eventName" properties:@{ @"SOURCEDATA": @"ad_channel_API_KEY" }];
-    }
-    else
-    {
-        const BOOL presentLevel = [preferences boolForKey: isFirstSourceData];
-    }
-    
-NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
-NSString* isFirstSourceData = @"isFirstSourceData";
-const NSInteger presentLevel = ...;
-[preferences setBool:presentLevel forKey: isFirstSourceData];
-const BOOL didSave = [preferences synchronize];
-
-```
-
-#####3) App Events
+#####2) App Events
 All app events have to be passed to our SDK. Information can be passed in two ways:
 
 #####a. Via 3rd party platform
@@ -265,28 +236,6 @@ In case you do not use any 3rd party platform or the platform doesn’t support 
 
 ```
 
-#####4) Crash Events
-Send the API keys of the crash-reporting platform to us. We will extract the information using their API. In case you are reporting the crash manually, then pass the information to our SDK as well. Help code snippet below.
-
-```
-NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
-NSString* isFirstReportData = @"isFirstReportData";
-if([preferences objectForKey: isFirstReportData] == nil)
-    {
-        [[NotifyManager sharedManager] track:@"crashReport" properties:@{ @"CRASH_REPORT_ID": @"crash_report_id" }];
-    }
-    else
-    {
-        const BOOL presentLevel = [preferences boolForKey: isFirstReportData];
-    }
-    
-NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
-NSString* isFirstReportData = @"isFirstReportData";
-const NSInteger presentLevel = ...;
-[preferences setBool:presentLevel forKey: isFirstReportData];
-const BOOL didSave = [preferences synchronize];
-
-```
 
 ### Send us your Push certificate for testing
 
