@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "Uninstall.io SDK"
+  s.name         = "Uninstall.io-SDK"
   s.version      = "1.0.0"
   s.summary      = "World’s First Solution on Uninstall Mystery"
 
