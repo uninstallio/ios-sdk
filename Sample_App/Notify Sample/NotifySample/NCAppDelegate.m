@@ -9,7 +9,10 @@
 
 #define kNotifyAPPID        @"169e640ca23146b8b70c81248da504dd"
 #define kNotifySecretKey    @"iCvyrxJj1cpJ1gYGo2vwlFBt1RE9rdsD0dL6NcOo8/RooHnRceycD2pUMpEmBCV21sIoEZvD+4pOxJqfgGhkrA=="
-
+/*
+#define kNotifyAPPID        @"c4769dc8e51e4097abc1ca216a4bd5f9"
+#define kNotifySecretKey    @"KagYQSMwxRXRGFboTeZwgPbD08uEeS5FQXsaqrm3UjR8C8GvUBRGjmUxpnFMbDTnuFd52rolcg2lK70QheV84Q==/RooHnRceycD2pUMpEmBCV21sIoEZvD+4pOxJqfgGhkrA=="
+*/
 #import "NCAppDelegate.h"
 
 #import "NCViewController.h"
@@ -24,7 +27,7 @@
     self.viewController = [[NCViewController alloc] initWithNibName:@"NCViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
     //Check if the app was waken up by notify services
     [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
@@ -69,6 +72,7 @@
     
 //    NSLog(@"applicationWillEnterForeground");
     [[NotifyManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

@@ -26,6 +26,8 @@
 
 }
 
+
+
 - (IBAction)enableLocation
 {
     _manager = [[CLLocationManager alloc] init];
