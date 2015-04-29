@@ -17,6 +17,5 @@ Pod::Spec.new do |s|
 
   s.source_files   = "Classes", "Builds/All-Targets-armv6-armv7-simulator/include/**/*.{h,m}"
   s.preserve_paths = "Builds/All-Targets-armv6-armv7-simulator/libNotifyManager.a"
-  s.frameworks     = "'CoreLocation','CoreBluetooth','CoreTelephony','QuartzCore','Security','SystemConfiguration','AdSupport'"
   s.requires_arc = true
 end
