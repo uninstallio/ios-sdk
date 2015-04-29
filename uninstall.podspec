@@ -17,6 +17,6 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/uninstallio/ios-sdk.git", :tag => s.version.to_s }
 
   s.source_files  = "Classes", "Builds/All-Targets-armv6-armv7-simulator/include/**/*.{h,m}"
-  s.preserve_paths = "Builds/device/All-Targets-armv6-armv7-simulator/libNotifyManager.a"
+  s.preserve_paths = "Builds/All-Targets-armv6-armv7-simulator/libNotifyManager.a"
   s.requires_arc = true
 end
