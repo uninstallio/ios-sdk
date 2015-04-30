@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "http://www.uninstall.io/"
-  s.license      = { :type => "BSD", :file => "LICENSE" }
+  s.license      = { :type => "BSD"}
   s.author       = { "Aravind G S" => "aravindgs@github.com" }
 
 
