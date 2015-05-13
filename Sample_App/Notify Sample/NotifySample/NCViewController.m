@@ -23,7 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	// Do any additional setup after loading the view,typically from a nib.
     if (![[[NSUserDefaults standardUserDefaults] valueForKey:@"usersent"] isEqualToString:@"1"])
     {
          [[NotifyManager sharedManager] identify:@"1234" traits:@{ @"name": @"Aravind",@"email": @"aravind@notiphi.com"}];
