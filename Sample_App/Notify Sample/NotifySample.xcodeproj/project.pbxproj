@@ -26,7 +26,7 @@
 		F280AB891A8B613800DC5900 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB881A8B613800DC5900 /* AdSupport.framework */; };
 		F280AB8B1A8B614400DC5900 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */; };
 		F280AB8D1A8B614800DC5900 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8C1A8B614800DC5900 /* Security.framework */; };
-		F2E3903F1B0C7AB60021C8B6 /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E3903E1B0C7AB50021C8B6 /* libNotifyManager.a */; };
+		F2DAA0071B0E1C8700EFD6CC /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2DAA0061B0E1C8700EFD6CC /* libNotifyManager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,7 @@
 		F2BD4BE21AC97A450066AFE9 /* NotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyManager.h; sourceTree = "<group>"; };
 		F2BD4BE31AC97A450066AFE9 /* NotifyRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRegionManager.h; sourceTree = "<group>"; };
 		F2BD4BE41AC97A450066AFE9 /* NotifyServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyServiceManager.h; sourceTree = "<group>"; };
-		F2E3903E1B0C7AB50021C8B6 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNotifyManager.a; sourceTree = "<group>"; };
+		F2DAA0061B0E1C8700EFD6CC /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNotifyManager.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 			files = (
 				F280AB8D1A8B614800DC5900 /* Security.framework in Frameworks */,
 				F280AB8B1A8B614400DC5900 /* SystemConfiguration.framework in Frameworks */,
-				F2E3903F1B0C7AB60021C8B6 /* libNotifyManager.a in Frameworks */,
+				F2DAA0071B0E1C8700EFD6CC /* libNotifyManager.a in Frameworks */,
 				F280AB891A8B613800DC5900 /* AdSupport.framework in Frameworks */,
 				F280AB851A8B613200DC5900 /* CoreBluetooth.framework in Frameworks */,
 				F280AB861A8B613200DC5900 /* CoreTelephony.framework in Frameworks */,
@@ -106,7 +106,7 @@
 		F186184B167F4164003CE49E = {
 			isa = PBXGroup;
 			children = (
-				F2E3903E1B0C7AB50021C8B6 /* libNotifyManager.a */,
+				F2DAA0061B0E1C8700EFD6CC /* libNotifyManager.a */,
 				F2BD4BE01AC97A450066AFE9 /* include */,
 				F14826941714166900D77C06 /* Default-568h@2x.png */,
 				F186189C167F42E7003CE49E /* CoreLocation.framework */,
