@@ -5,7 +5,7 @@
 
 This guide will provide you step by step details on how to integrate the SDK in just a few minutes. Following steps outline the integration process in details.
 
-### Steps to integrate the sdk to your Xcode - iOS project.
+### Steps to integrate the sdk to your Xcode - iOS project (Without CocoaPods).
 
 * [Download the zipped package and Unzip the file\.] (#download-the-zipped-package-and-unzip-the-file)
 * [Attach the Uninstall library to your project\.](#attach-the-uninstall-library-to-your-project)
@@ -13,9 +13,7 @@ This guide will provide you step by step details on how to integrate the SDK in 
 * [Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
 * [Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
   * [Unique System User ID and Email ID\.](#1-unique-system-user-id-and-email-id)
-  * [Install Source\.](#2-install-source)
-  * [App Events\.](#3-app-events)
-  * [Crash Events](#4-crash-events)
+  * [App Events\.](#2-app-events)
 * [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
 
 
