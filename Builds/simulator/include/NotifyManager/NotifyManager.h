@@ -23,17 +23,11 @@
 
 -(void) stopNotifyServices;
 
--(void) processLocalNotification:(UILocalNotification *)localNotification;
-
 -(void) processRemoteNotification:(NSDictionary *)userInfo;
 
 -(void) processLaunchOptions:(NSDictionary *)launchOptions;
 
--(BOOL) isLocalNotificationFromNotify:(UILocalNotification *)localNotification;
-
 -(BOOL) isRemoteNotificationFromNotify:(NSDictionary *)userInfo;
-
--(BOOL) isAppLaunchedByNotifyService:(NSDictionary *)launchOptions;
 
 -(void) registerForPushNotificationUsingDeviceToken:(NSData *)deviceToken;
 
@@ -42,8 +36,6 @@
 -(void) takeEventsArrayOnFocusLose:(NSArray *)arrayOfJsons;
 
 -(void) sendEventsOnFocusLose;
-
--(void) setEvents:(NSArray *)eventsArray;
 
 -(void) flush;
 

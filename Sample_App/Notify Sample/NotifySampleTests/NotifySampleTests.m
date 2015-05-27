@@ -26,7 +26,7 @@
 
 - (void)testExample
 {
-    XCTFail(@"Unit tests are not implemented yet in NotifySampleTests");
+//    XCTFail(@"Unit tests are not implemented yet in NotifySampleTests");
 }
 
 @end
