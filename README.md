@@ -24,6 +24,8 @@ This guide will provide you step by step details on how to integrate the SDK in 
   * [Unique System User ID and Email ID\.](#1-unique-system-user-id-and-email-id)
   * [App Events\.](#2-app-events)
 * [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
+
+
 ####Download the zipped package and unzip the file
 
 Clone this repository
