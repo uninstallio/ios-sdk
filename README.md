@@ -18,7 +18,7 @@ This guide will provide you step by step details on how to integrate the SDK in 
 
 
 ### Steps to integrate the sdk to your Xcode - iOS project (With CocoaPods).
-* [Add uninstall pod to Podfile using ```pod 'Uninstall', '~> 1.0'``` \.] 
+* Add uninstall pod to Podfile using ```pod 'Uninstall', '~> 1.0'``` 
 * [Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
 * [Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
   * [Unique System User ID and Email ID\.](#1-unique-system-user-id-and-email-id)
