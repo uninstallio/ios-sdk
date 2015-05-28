@@ -17,7 +17,13 @@ This guide will provide you step by step details on how to integrate the SDK in 
 * [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
 
 
-
+### Steps to integrate the sdk to your Xcode - iOS project (With CocoaPods).
+* [Add uninstall pod to Podfile using ```pod 'Uninstall', '~> 1.0'``` \.] 
+* [Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
+* [Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
+  * [Unique System User ID and Email ID\.](#1-unique-system-user-id-and-email-id)
+  * [App Events\.](#2-app-events)
+* [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
 ####Download the zipped package and unzip the file
 
 Clone this repository
