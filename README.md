@@ -77,7 +77,7 @@ and click "Add"
 
 ![Alt text](/READMESCR/2c.png?raw=true)
 
-###Configure libraries and permissions in the project
+####Configure libraries and permissions in the project
 
 Uninstall needs some background capabilities. You need to specify that you’ll use these feature in the **UIBackgroundModes** key in your info plist.
 We need the following list of permissions
