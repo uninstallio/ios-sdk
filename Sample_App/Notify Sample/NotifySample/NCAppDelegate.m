@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 sample. All rights reserved.
 //
 
+#warning Add NotifyAppId and NotifySecretKey in the below fields
+
 #define kNotifyAPPID        @""
 #define kNotifySecretKey    @""
 
