@@ -50,4 +50,7 @@
 
 -(NSString *)getUUID;
 
+-(NSString *) getDateInUTFFormat;
+
+
 @end
