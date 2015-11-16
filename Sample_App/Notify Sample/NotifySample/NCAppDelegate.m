@@ -25,7 +25,6 @@
     self.viewController = [[NCViewController alloc] initWithNibName:@"NCViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-//    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     
     //Check if the app was waken up by notify services
     [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
@@ -41,8 +40,7 @@
     {
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes: (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     }
-    
-
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
     return YES;
 }
 
