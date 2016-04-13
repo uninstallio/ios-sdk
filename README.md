@@ -285,6 +285,6 @@ The certificate file is ready. Please email it to us.
 
 ### Support or Contact
 
-Having trouble with integration? Please contact us at **[ios-dev-support@uninstall.io] [1]** and we’ll help you sort it out in a jiffy.
+Having trouble with integration? Please contact us at **[sdk_integration@uninstall.io] [1]** and we’ll help you sort it out in a jiffy.
 
-[1]: mailto:ios-dev-support@uninstall.io        "ios-dev-support@uninstall.io"
+[1]: mailto:sdk_integration@uninstall.io        "sdk_integration@uninstall.io"
