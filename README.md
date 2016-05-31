@@ -36,7 +36,7 @@ Unzip the files (if downloaded as a zip).
 
 ###Step 2 : Attach the Uninstall Library to your project
 
-####1. Add static library
+#####1. Add static library
 
 Add the files from **All Targets** in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project, then refer to the follwoing steps.
 
@@ -48,7 +48,7 @@ b. Choose the Builds and then the **All Targets** folder. Select the file **"lib
 
 ![Alt text](/READMESCR/1b.png?raw=true)
 
-####2. Link The Required Frameworks
+#####2. Link The Required Frameworks
 
 a. Click on your project folder on the project navigator pane and go to **"Build Phases"** Tab
 
@@ -103,10 +103,10 @@ You would also need to add the following device capability in the Info.plist fil
 Once the permissions are set, we can change the code as shown below.
 ###Step 4 : Add Uninstall methods from library in the project
 
-####1. Import
+#####1. Import
 **"NotifyManager.h"** to your app delegate
 
-####2. Add
+#####2. Add
 ```
   [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
   [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"appToken" key:@"appSecret"];
@@ -135,7 +135,7 @@ in your AppDelegate.
 
 Note: App Token and App Secret are provided by Uninstall.io and is used to uniquely identify your application. If you do not have the token and secret then please drop a mail to **[ios-dev-support@uninstall.io] [1]** to get these credentials for your app.
 
-####3. Add
+#####3. Add
 ```
   [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"appToken"
 key:@"appSecret"];
@@ -150,7 +150,7 @@ To the method
 In your app delegate.
 
 
-####4. Add
+#####4. Add
 ```
     [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
 ```
@@ -159,7 +159,7 @@ to the method
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 ```
 
-####5. Add
+#####5. Add
 ```
     [[NotifyManager sharedManager] processRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
@@ -171,7 +171,7 @@ to the method
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 
 ```
-####6. Add
+#####6. Add
 ```
     [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"appToken" key:@"appSecret"];
     completionHandler(UIBackgroundFetchResultNoData);
@@ -182,7 +182,7 @@ to the method
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 ```
 
-####7. Add
+#####7. Add
 ```
     [[NotifyManager sharedManager] didLoseFocus];
 
@@ -216,10 +216,10 @@ Pass the Unique System User ID and Email Id to our SDK. This data will be used t
 #####2) App Events
 All app events have to be passed to our SDK. Information can be passed in two ways:
 
-#####a. Via 3rd party platform
+######a. Via 3rd party platform
 If you use any third party analytics platform and supports data extraction via API, then send us the API keys and we will directly extract the information from there. Please check with your product/marketing manager for details on 3rd party platform.
 
-#####b. Via the App
+######b. Via the App
 In case you do not use any 3rd party platform or the platform doesn’t support any API then pass the data to our SDK via our event-capturing feature. Help code snippet below.
 
 
