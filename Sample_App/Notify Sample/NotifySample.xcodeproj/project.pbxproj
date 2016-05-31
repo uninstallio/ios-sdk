@@ -255,7 +255,7 @@
 				ORGANIZATIONNAME = sample;
 				TargetAttributes = {
 					F1861855167F4164003CE49E = {
-						DevelopmentTeam = 6EGK8RUA3R;
+						DevelopmentTeam = WP8MNQC9P9;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;

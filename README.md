@@ -1,9 +1,9 @@
 [Uninstall Insights](http://uninstall.io) iPhone SDK
 ===================
 
-[Uninstall SDK (http://uninstall.io)](http://uninstall.io) helps you to understand the reasons for your app uninstalls, reduce the uninstall rate using a powerful predictive engine and also get app Re-installs through a unique actionable channel. 
+[Uninstall SDK (http://uninstall.io)](http://uninstall.io) helps you to understand the reasons for your app uninstalls, reduce the uninstall rate with a powerful predictive engine and also get app re-installs through a unique actionable channel. 
 
-This guide will provide you step by step details on how to integrate the SDK in just a few minutes. Following steps outline the integration process in details.
+This guide will provide you step by step details on how to integrate the SDK in just a few minutes. The following steps outline the integration process in details.
 
 ### Steps to integrate the sdk to your Xcode - iOS project (Without CocoaPods).
 
@@ -27,7 +27,7 @@ This guide will provide you step by step details on how to integrate the SDK in 
 * [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
 
 
-####Download the zipped package and unzip the file
+###Download the zipped package and unzip the file
 
 Clone this repository
 
@@ -77,7 +77,7 @@ and click "Add"
 
 ![Alt text](/READMESCR/2c.png?raw=true)
 
-####Configure libraries and permissions in the project
+###Configure libraries and permissions in the project
 
 Uninstall needs some background capabilities. You need to specify that you’ll use these feature in the **UIBackgroundModes** key in your info plist.
 We need the following list of permissions
