@@ -36,36 +36,36 @@ Unzip the files (if downloaded as a zip).
 
 ###Step 2 : Attach the Uninstall Library to your project
 
-####1. Add static library
+	####1. Add static library
 
-Add the files from **All Targets** in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project, then refer to the follwoing steps.
+	Add the files from **All Targets** in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project, then refer to the follwoing steps.
 
-a. Right click anywhere on the project navigator pane and select **Add Files to "Your project"** menu
+			a. Right click anywhere on the project navigator pane and select **Add Files to "Your project"** menu
 
 ![Alt text](/READMESCR/1a.png?raw=true)
 
-b. Choose the Builds and then the **All Targets** folder. Select the file **"libNotifyManager.a"** and Folder **"include"** and click on "Add" Button on the bottom right button of the window displayed
+			b. Choose the Builds and then the **All Targets** folder. Select the file **"libNotifyManager.a"** and Folder **"include"** and click on "Add" Button on the bottom right button of the window displayed
 
 ![Alt text](/READMESCR/1b.png?raw=true)
 
-####2. Link The Required Frameworks
+	####2. Link The Required Frameworks
 
-a. Click on your project folder on the project navigator pane and go to **"Build Phases"** Tab
+			a. Click on your project folder on the project navigator pane and go to **"Build Phases"** Tab
 
-b. Expand the **"Link Binary With Library"** pane.
+			b. Expand the **"Link Binary With Library"** pane.
 
 ![Alt text](/READMESCR/2b.png?raw=true)
 
-c. Click on the **'+'** button and select
-  * **CoreLocation.framework**
-  * **CoreBluetooth.framework**
-  * **CoreTelephony.framework**
-  * **QuartzCore.framework**
-  * **Security.framework**
-  * **SystemConfiguration.framework**
-  * **Ad.Support.framework**
+			c. Click on the **'+'** button and select
+  				* **CoreLocation.framework**
+  				* **CoreBluetooth.framework**
+  				* **CoreTelephony.framework**
+  				* **QuartzCore.framework**
+  				* **Security.framework**
+  				* **SystemConfiguration.framework**
+  				* **Ad.Support.framework**
    
-and click "Add"
+			and click "Add"
 
 ![Alt text](/READMESCR/2c.png?raw=true)
 
