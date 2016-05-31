@@ -19,7 +19,7 @@ This guide will provide you step by step details on how to integrate the SDK in 
 If you are using Cocopods, skip Step 1 & Step 2 from the above steps and follow the below mentioned Step 1.
 * Step 1 : Add uninstall pod to Podfile using ```pod 'Uninstall', '~> 1.0'``` 
 
-###Download the zipped package and unzip the file
+###Step 1 : Download the zipped package and unzip the file
 
 Clone this repository
 
@@ -34,7 +34,7 @@ wget https://github.com/uninstallio/ios-sdk/archive/master.zip
 ```
 Unzip the files (if downloaded as a zip).
 
-###Attach the Uninstall Library to your project
+###Step 2 : Attach the Uninstall Library to your project
 
 ####1. Add static library
 
@@ -69,7 +69,7 @@ and click "Add"
 
 ![Alt text](/READMESCR/2c.png?raw=true)
 
-###Configure libraries and permissions in the project
+###Step 3 : Configure libraries and permissions in the project
 
 Uninstall needs some background capabilities. You need to specify that you’ll use these features in the **UIBackgroundModes** key in your info plist.
 We need the following list of permissions
@@ -101,7 +101,7 @@ You would also need to add the following device capability in the info plist fil
 ```
 
 Once the permissions are set, we can change the code as shown below.
-###Add Uninstall methods from library in the project
+###Step 4 : Add Uninstall methods from library in the project
 
 ####1. Import
 **"NotifyManager.h"** to your app delegate
@@ -194,7 +194,7 @@ to the method
 
 
 
-###Sending Events Using Uninstall Library
+###Step 5 : Sending Events Using Uninstall Library
 If you need to send us some events then you would need to do the additional steps as shown below.
 
 #####1) Unique System User ID and Email ID
@@ -236,7 +236,7 @@ In case you do not use any 3rd party platform or the platform doesn’t support 
 ```
 
 
-### Send us your Push certificate for testing
+###Step 6 : Send us your Push certificate for testing
 
 In the Apple Developer Members Center, click on Identifiers under iOS Apps and locate your application in the list. Click on that app which you want to configure. If Push Notifications is disabled (as shown below)
 
