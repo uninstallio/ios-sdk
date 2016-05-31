@@ -81,7 +81,7 @@ The easiest way to do this is to use the new Capabilities tab in Xcode 5’s pro
 
 ![Alt text](/READMESCR/xcode_background.png?raw=true)
 
-Alternatively, you can edit the key manually:
+Alternatively, you can edit the key manually in the Info.plist file:
 
 ```
 <key>UIBackgroundModes</key>
@@ -91,7 +91,7 @@ Alternatively, you can edit the key manually:
   </array>
 ```
 
-You would also need to add the following device capability in the info plist file.
+You would also need to add the following device capability in the Info.plist file.
 
 ```
 <key>UIRequiredDeviceCapabilities</key>
@@ -124,16 +124,16 @@ Once the permissions are set, we can change the code as shown below.
 
 ```
 
-To the method
+to the method
 
 ```
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:
 (NSDictionary *)launchOptions
 ```
 
-In your app delegate. 
+in your AppDelegate. 
 
-Note: If you do not have the token and secret then please drop a mail to **[ios-dev-support@uninstall.io] [1]** to get these credentials for your app.
+Note: App Token and App Secret are provided by Uninstall.io and is used to uniquely identify your application. If you do not have the token and secret then please drop a mail to **[ios-dev-support@uninstall.io] [1]** to get these credentials for your app.
 
 ####3. Add
 ```
@@ -195,28 +195,21 @@ to the method
 
 
 ###Step 5 : Sending Events Using Uninstall Library
-If you need to send us some events then you would need to do the additional steps as shown below.
+We provide an additional option for you to send us additional events. The events to be sent are to be identified from your side and send accordingly. If you need to send us some events then you would need to do the additional steps as shown below.
 
 #####1) Unique System User ID and Email ID
-Pass the Unique System User ID and Email Id to our SDK. This data will be used to synchronize the ID’s between our systems and also to take certain actions. This information has to be passed only once in the lifetime of the app. Help code snippet below.
+Pass the Unique System User ID and Email Id to our SDK. This data will be used to synchronize the ID’s between our systems and also to take certain actions. This needs to done only once. Help code snippet below. This code snippet is to be added where you have obtained the user_id/email for the user in the app
 
 ```
- NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
- NSString* isFirstTimeInstall = @"isFirstTimeInstall";
- if([preferences objectForKey: isFirstTimeInstall] == nil)
-    {
-        [[NotifyManager sharedManager] identify:@"userId" traits:@{ @"name": @"User_Name",@"email": @"user@xyz.com" }];
-    }
-    else
-    {
-        const BOOL presentLevel = [preferences boolForKey: isFirstTimeInstall];
-    }
-    
-NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
-NSString* isFirstTimeInstall = @"isFirstTimeInstall";
-const NSInteger presentLevel = ...;
-[preferences setBool:presentLevel forKey:isFirstTimeInstall];
-const BOOL didSave = [preferences synchronize];
+	NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
+	NSString* isFirstTimeInstall = @"isFirstTimeInstall";
+	if([preferences objectForKey: isFirstTimeInstall] == nil)
+	{
+	    [[NotifyManager sharedManager] identify:@"userId" traits:@{ @"name": @"User_Name",@"email": @"user@xyz.com" }];
+	}
+	const NSInteger presentLevel = 1;
+	[preferences setBool:presentLevel forKey:isFirstTimeInstall];
+	[preferences synchronize];
 
 ```
 
@@ -242,7 +235,7 @@ In the Apple Developer Members Center, click on Identifiers under iOS Apps and l
 
 ![Alt text](/READMESCR/not_disabled.png?raw=true)
 
-then click on Edit which will show you something like this.
+Click on 'Edit' button. The following window will be displayed
 
 ![Alt text](/READMESCR/edit_nots.png?raw=true)
 
