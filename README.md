@@ -5,27 +5,19 @@
 
 This guide will provide you step by step details on how to integrate the SDK in just a few minutes. The following steps outline the integration process in details.
 
-### Steps to integrate the sdk to your Xcode - iOS project (Without CocoaPods).
+### Steps to integrate the sdk to your Xcode - iOS project
 
-* [Download the zipped package and Unzip the file\.] (#download-the-zipped-package-and-unzip-the-file)
-* [Attach the Uninstall library to your project\.](#attach-the-uninstall-library-to-your-project)
-* [Configure libraries and permissions in the project\.](#configure-libraries-and-permissions-in-the-project)
-* [Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
-* [Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
+* Step 1 : [Download the zipped package and Unzip the file\.] (#download-the-zipped-package-and-unzip-the-file)
+* Step 2 : [Attach the Uninstall library to your project\.](#attach-the-uninstall-library-to-your-project)
+* Step 3 : [Configure libraries and permissions in the project\.](#configure-libraries-and-permissions-in-the-project)
+* Step 4 : [Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
+* Step 5 : [Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
   * [Unique System User ID and Email ID\.](#1-unique-system-user-id-and-email-id)
   * [App Events\.](#2-app-events)
-* [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
+* Step 6 : [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
 
-
-### Steps to integrate the sdk to your Xcode - iOS project (With CocoaPods).
-* Add uninstall pod to Podfile using ```pod 'Uninstall', '~> 1.0'``` 
-* [Configure libraries and permissions in the project\.](#configure-libraries-and-permissions-in-the-project)
-* [Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
-* [Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
-  * [Unique System User ID and Email ID\.](#1-unique-system-user-id-and-email-id)
-  * [App Events\.](#2-app-events)
-* [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
-
+If you are using Cocopods, skip Step 1 & Step 2 from the above steps and follow the below mentioned Step 1.
+* Step 1 : Add uninstall pod to Podfile using ```pod 'Uninstall', '~> 1.0'``` 
 
 ###Download the zipped package and unzip the file
 
@@ -46,17 +38,17 @@ Unzip the files (if downloaded as a zip).
 
 ####1. Add static library
 
-Add the files from **All Targets** in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project.
+Add the files from **All Targets** in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project, then refer to the follwoing steps.
 
 a. Right click anywhere on the project navigator pane and select **Add Files to "Your project"** menu
 
 ![Alt text](/READMESCR/1a.png?raw=true)
 
-b. Choose the Builds and then the **All Targets** folder. Select the file **"libNotifyManager.a"** and Folder **"include"** and click on "Add"
+b. Choose the Builds and then the **All Targets** folder. Select the file **"libNotifyManager.a"** and Folder **"include"** and click on "Add" Button on the bottom right button of the window displayed
 
 ![Alt text](/READMESCR/1b.png?raw=true)
 
-####2. Link Core Location Framework
+####2. Link The Required Frameworks
 
 a. Click on your project folder on the project navigator pane and go to **"Build Phases"** Tab
 
@@ -79,7 +71,7 @@ and click "Add"
 
 ###Configure libraries and permissions in the project
 
-Uninstall needs some background capabilities. You need to specify that you’ll use these feature in the **UIBackgroundModes** key in your info plist.
+Uninstall needs some background capabilities. You need to specify that you’ll use these features in the **UIBackgroundModes** key in your info plist.
 We need the following list of permissions
 
 1. fetch
