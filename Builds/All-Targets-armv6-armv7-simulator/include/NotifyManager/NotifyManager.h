@@ -45,6 +45,8 @@
 
 -(void) setEvents:(NSArray *)eventsArray;
 
+-(void) isUpgrade:(BOOL)upgraded;
+
 -(void) flush;
 
 -(void) didLoseFocus;

@@ -3,11 +3,13 @@
 
 [Uninstall SDK (http://uninstall.io)](http://uninstall.io) helps you to understand the reasons for your app uninstalls, reduce the uninstall rate with a powerful predictive engine and also get app re-installs through a unique actionable channel. 
 
-This guide will provide you step by step details on how to integrate the SDK in just a few minutes. The following steps outline the integration process in details.
+This guide will provide you with step by step details on how to integrate the SDK in just a few minutes. The following steps outline the integration process in details.
 
 ### Steps to integrate the sdk to your Xcode - iOS project
 
-* Step 1 : [Download the zipped package and Unzip the file\.] (#download-the-zipped-package-and-unzip-the-file)
+Here are the steps for integration.  Click on the links below to jump to a particular section.
+
+* Step 1 : [Download the zipped package and Unzip the file\.](#download-the-zipped-package-and-unzip-the-file)
 * Step 2 : [Attach the Uninstall library to your project\.](#attach-the-uninstall-library-to-your-project)
 * Step 3 : [Configure libraries and permissions in the project\.](#configure-libraries-and-permissions-in-the-project)
 * Step 4 : [Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
@@ -38,7 +40,7 @@ Unzip the files (if downloaded as a zip).
 
 #####1. Add static library
 
-Add the files from **All Targets** in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project, then refer to the follwoing steps.
+Add the files from **All Targets** in Builds directory to your project. If you are unfamiliar with the process of adding external libraries to your project, then refer to the following steps.
 
 a. Right click anywhere on the project navigator pane and select **Add Files to "Your project"** menu
 
