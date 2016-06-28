@@ -9,14 +9,14 @@ This guide will provide you with step by step details on how to integrate the SD
 
 Here are the steps for integration.  Click on the links below to jump to a particular section.
 
-* [Step 1 : Download the zipped package and Unzip the file\.](#download-the-zipped-package-and-unzip-the-file)
-* [Step 2 : Attach the Uninstall library to your project\.](#attach-the-uninstall-library-to-your-project)
-* [Step 3 : Configure libraries and permissions in the project\.](#configure-libraries-and-permissions-in-the-project)
-* [Step 4 : Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
-* [Step 5 : Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
+* [Download the zipped package and Unzip the file\.](#download-the-zipped-package-and-unzip-the-file)
+* [Attach the Uninstall library to your project\.](#attach-the-uninstall-library-to-your-project)
+* [Configure libraries and permissions in the project\.](#configure-libraries-and-permissions-in-the-project)
+* [Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
+* [Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
   * [Unique System User ID and Email ID\.](#1-unique-system-user-id-and-email-id)
   * [App Events\.](#2-app-events)
-* [Step 6 : Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
+* [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
 
 If you are using Cocopods, skip Step 1 & Step 2 from the above steps and follow the below mentioned Step 1.
 * Step 1 : Add uninstall pod to Podfile using ```pod 'Uninstall', '~> 1.0'``` 
@@ -257,13 +257,13 @@ Once the Download button appears, you are ready to download. You may need to rel
 
 Open the certificate. Opening the certificate will open Keychain Access.
 
-In Keychain Access your certificate should be shown under “My Certificates”. The name will be like **Apple Development IOS Push Services:*xxxxxxxx**
+In Keychain Access your certificate should be shown under “My Certificates”. The name will be like **Apple Push Services:*xxxxxxxx**
 
 ![Alt text](/READMESCR/open_certificate.png?raw=true)
 
 ####Exporting the .p12 file
 
-Select the certificate that was just added to Keychain Access and select File -> Export Items... from the menu. 
+Select the certificate that was just added to Keychain Access and select File -> Export Items... from the menu. Save the p12 file without any password 
 
 ![Alt text](/READMESCR/export_p12.png)
 
@@ -271,7 +271,17 @@ When saving the file, use the Personal Information Exchange (.p12) format.
 
 ![Alt text](/READMESCR/save_p12.png?raw=true)
 
-The certificate file is ready. Please email it to us.
+After saving the p12 file, open Terminal in your Mac. Go to the folder in which you have saved the p12 file using ```cd <path_to_directory>``` command. Once inside the directory type 
+
+```
+  openssl pkcs12 -in <input p12 file> -out <output pem file name> -nodes
+
+```
+Eg : openssl pkcs12 -in uiodemo.p12 -out uiodemo.pem -nodes
+
+![Alt text](/READMESCR/convert_pem.png?raw=true)
+
+The certificate pem file is ready. Please email it to us.
 
 
 ### Support or Contact
