@@ -9,14 +9,14 @@ This guide will provide you with step by step details on how to integrate the SD
 
 Here are the steps for integration.  Click on the links below to jump to a particular section.
 
-* Step 1 : [Download the zipped package and Unzip the file\.](#download-the-zipped-package-and-unzip-the-file)
-* Step 2 : [Attach the Uninstall library to your project\.](#attach-the-uninstall-library-to-your-project)
-* Step 3 : [Configure libraries and permissions in the project\.](#configure-libraries-and-permissions-in-the-project)
-* Step 4 : [Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
-* Step 5 : [Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
+* [Step 1 : Download the zipped package and Unzip the file\.](#download-the-zipped-package-and-unzip-the-file)
+* [Step 2 : Attach the Uninstall library to your project\.](#attach-the-uninstall-library-to-your-project)
+* [Step 3 : Configure libraries and permissions in the project\.](#configure-libraries-and-permissions-in-the-project)
+* [Step 4 : Add Uninstall methods from library in the project\.](#add-uninstall-methods-from-library-in-the-project)
+* [Step 5 : Sending Events using Uninstall library\.](#sending-events-using-uninstall-library)
   * [Unique System User ID and Email ID\.](#1-unique-system-user-id-and-email-id)
   * [App Events\.](#2-app-events)
-* Step 6 : [Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
+* [Step 6 : Send us your Push certificate for testing](#send-us-your-push-certificate-for-testing)
 
 If you are using Cocopods, skip Step 1 & Step 2 from the above steps and follow the below mentioned Step 1.
 * Step 1 : Add uninstall pod to Podfile using ```pod 'Uninstall', '~> 1.0'``` 
@@ -235,11 +235,11 @@ In case you do not use any 3rd party platform or the platform doesn’t support 
 
 In the Apple Developer Members Center, click on Identifiers under iOS Apps and locate your application in the list. Click on that app which you want to configure. If Push Notifications is disabled (as shown below)
 
-![Alt text](/READMESCR/not_disabled.png?raw=true)
+![Alt text](/READMESCR/push_configure.png?raw=true)
 
 Click on 'Edit' button. The following window will be displayed
 
-![Alt text](/READMESCR/edit_nots.png?raw=true)
+![Alt text](/READMESCR/create_certificate.png?raw=true)
 
 Ensure that the checkbox against  **Push Notifications** is checked.
 
@@ -253,19 +253,23 @@ Using the Certificate Signing request that was just created generate the APNS Pu
 
 Once the Download button appears, you are ready to download. You may need to reload the page for this to update. Download the created certificate.
 
-![Alt text](/READMESCR/download.png?raw=true)
+![Alt text](/READMESCR/download_certificate.png?raw=true)
 
 Open the certificate. Opening the certificate will open Keychain Access.
 
 In Keychain Access your certificate should be shown under “My Certificates”. The name will be like **Apple Development IOS Push Services:*xxxxxxxx**
 
-![Alt text](/READMESCR/certs.png?raw=true)
+![Alt text](/READMESCR/open_certificate.png?raw=true)
 
 ####Exporting the .p12 file
 
-Select the certificate that was just added to Keychain Access and select File -> Export Items... from the menu. When saving the file, use the Personal Information Exchange (.p12) format.
+Select the certificate that was just added to Keychain Access and select File -> Export Items... from the menu. 
 
-![Alt text](/READMESCR/export.png?raw=true)
+![Alt text](/READMESCR/export_p12.png)
+
+When saving the file, use the Personal Information Exchange (.p12) format.
+
+![Alt text](/READMESCR/save_p12.png?raw=true)
 
 The certificate file is ready. Please email it to us.
 
