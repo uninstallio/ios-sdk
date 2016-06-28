@@ -9,14 +9,14 @@ This guide will provide you with step by step details on how to integrate the SD
 
 Here are the steps for integration.  Click on the links below to jump to a particular section.
 
-* [Step 1 : Download the zipped package and Unzip the file\.](#step-1-download-the-zipped-package-and-unzip-the-file)
-* [Step 2 : Attach the Uninstall library to your project\.](#step-2-attach-the-uninstall-library-to-your-project)
-* [Step 3 : Configure libraries and permissions in the project\.](#step-3-configure-libraries-and-permissions-in-the-project)
-* [Step 4 : Add Uninstall methods from library in the project\.](#step-4-add-uninstall-methods-from-library-in-the-project)
-* [Step 5 : Sending Events using Uninstall library\.](#step-5-sending-events-using-uninstall-library)
+* [Step 1 : Download the zipped package and Unzip the file\.](#step-1--download-the-zipped-package-and-unzip-the-file)
+* [Step 2 : Attach the Uninstall library to your project\.](#step-2--attach-the-uninstall-library-to-your-project)
+* [Step 3 : Configure libraries and permissions in the project\.](#step-3--configure-libraries-and-permissions-in-the-project)
+* [Step 4 : Add Uninstall methods from library in the project\.](#step-4--add-uninstall-methods-from-library-in-the-project)
+* [Step 5 : Sending Events using Uninstall library\.](#step-5--sending-events-using-uninstall-library)
   * [Unique System User ID and Email ID\.](#1-unique-system-user-id-and-email-id)
   * [App Events\.](#2-app-events)
-* [Step 6 : Send us your Push certificate for testing](#step-6-send-us-your-push-certificate-for-testing)
+* [Step 6 : Send us your Push certificate for testing](#step-6--send-us-your-push-certificate-for-testing)
 
 If you are using Cocopods, skip Step 1 & Step 2 from the above steps and follow the below mentioned Step 1.
 * Step 1 : Add uninstall pod to Podfile using ```pod 'Uninstall', '~> 1.0'``` 
