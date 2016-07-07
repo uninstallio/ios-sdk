@@ -106,12 +106,12 @@ Once the permissions are set, we can change the code as shown below.
 ###Step 4 : Add Uninstall methods from library in the project
 
 #####1. Import
-**"NotifyManager.h"** to your app delegate
+**"UninstallManager.h"** to your app delegate
 
 #####2. Add
 ```
-  [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
-  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"appToken" key:@"appSecret"];
+  [[UninstallManager sharedManager] processLaunchOptions:launchOptions];
+  [[UninstallManager sharedManager] startNotifyServicesWithAppID:<uninstall.io_app_token> key:<uninstall.io_app_secret>];
   
   if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
     {
@@ -139,8 +139,7 @@ Note: App Token and App Secret are provided by Uninstall.io and is used to uniqu
 
 #####3. Add
 ```
-  [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"appToken"
-key:@"appSecret"];
+  [[UninstallManager sharedManager] startNotifyServicesWithAppID:<uninstall.io_app_token> key:<uninstall.io_app_secret>];
 ```
 
 To the method
@@ -154,7 +153,7 @@ In your app delegate.
 
 #####4. Add
 ```
-    [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
+    [[UninstallManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
 ```
 to the method
 ```
@@ -163,7 +162,7 @@ to the method
 
 #####5. Add
 ```
-    [[NotifyManager sharedManager] processRemoteNotification:userInfo];
+    [[UninstallManager sharedManager] processRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 
 ```
@@ -175,7 +174,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 ```
 #####6. Add
 ```
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:@"appToken" key:@"appSecret"];
+    [[UninstallManager sharedManager] startNotifyServicesWithAppID:<uninstall.io_app_token> key:<uninstall.io_app_secret>];
     completionHandler(UIBackgroundFetchResultNoData);
 
 ```
@@ -186,7 +185,7 @@ to the method
 
 #####7. Add
 ```
-    [[NotifyManager sharedManager] didLoseFocus];
+    [[UninstallManager sharedManager] didLoseFocus];
 
 ```
 to the method
@@ -207,7 +206,7 @@ Pass the Unique System User ID and Email Id to our SDK. This data will be used t
 	NSString* isFirstTimeInstall = @"isFirstTimeInstall";
 	if([preferences objectForKey: isFirstTimeInstall] == nil)
 	{
-	    [[NotifyManager sharedManager] identify:@"userId" traits:@{ @"name": @"User_Name",@"email": @"user@xyz.com" }];
+	    [[UninstallManager sharedManager] identify:@"userId" traits:@{ @"name": @"User_Name",@"email": @"user@xyz.com" }];
 	}
 	const NSInteger presentLevel = 1;
 	[preferences setBool:presentLevel forKey:isFirstTimeInstall];
@@ -226,7 +225,7 @@ In case you do not use any 3rd party platform or the platform doesn’t support 
 
 
 ```
- [[NotifyManager sharedManager] track:@"eventName"  properties:@{ @"eventValue": @"Event-Value",@"IDSync": @"ABC1234"}];
+ [[UninstallManager sharedManager] track:@"eventName"  properties:@{ @"eventValue": @"Event-Value",@"IDSync": @"ABC1234"}];
 
 ```
 
