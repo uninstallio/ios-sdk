@@ -271,7 +271,7 @@ When saving the file, use the Personal Information Exchange (.p12) format.
 
 ![Alt text](/READMESCR/save_p12.png?raw=true)
 
-After saving the p12 file, open Terminal in your Mac. Go to the folder in which you have saved the p12 file using ```cd <path_to_directory>``` command. Once inside the directory type 
+After saving the p12 file, open Terminal in your Mac. Go to the folder in which you have saved the p12 file using ```cd <path_to_directory>``` command. Once inside the directory, enter the following command 
 
 ```
   openssl pkcs12 -in <input p12 file> -out <output pem file name> -nodes
