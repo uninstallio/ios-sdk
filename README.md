@@ -46,7 +46,7 @@ a. Right click anywhere on the project navigator pane and select **Add Files to 
 
 ![Alt text](/READMESCR/1a.png?raw=true)
 
-b. Choose the Builds and then the **All Targets** folder. Select the file **"libNotifyManager.a"** and Folder **"include"** and click on "Add" Button on the bottom right button of the window displayed
+b. Choose the Builds and then the **All Targets** folder. Select the file **"libUninstallManager.a"** and Folder **"include"** and click on "Add" Button on the bottom right button of the window displayed
 
 ![Alt text](/READMESCR/1b.png?raw=true)
 
