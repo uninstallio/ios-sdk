@@ -19,6 +19,7 @@
 		F186187A167F4164003CE49E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185A167F4164003CE49E /* UIKit.framework */; };
 		F186187B167F4164003CE49E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185C167F4164003CE49E /* Foundation.framework */; };
 		F1861886167F4164003CE49E /* NotifySampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1861885167F4164003CE49E /* NotifySampleTests.m */; };
+		F296819C1D4618FC00AF6EE8 /* libUninstallManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F296819B1D4618FC00AF6EE8 /* libUninstallManager.a */; };
 		F2B9C3C31D2279F40003F45E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB881A8B613800DC5900 /* AdSupport.framework */; };
 		F2B9C3C41D2279F40003F45E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB821A8B613200DC5900 /* CoreBluetooth.framework */; };
 		F2B9C3C51D2279F40003F45E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186189C167F42E7003CE49E /* CoreLocation.framework */; };
@@ -26,7 +27,6 @@
 		F2B9C3C71D2279F40003F45E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB841A8B613200DC5900 /* QuartzCore.framework */; };
 		F2B9C3C81D2279F40003F45E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8C1A8B614800DC5900 /* Security.framework */; };
 		F2B9C3C91D2279F40003F45E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */; };
-		F2C193661D2E81A0002A7FDC /* libUninstallManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C193601D2E81A0002A7FDC /* libUninstallManager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +67,10 @@
 		F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F280AB8C1A8B614800DC5900 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F28484221D215E01009170DA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		F2C193601D2E81A0002A7FDC /* libUninstallManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUninstallManager.a; sourceTree = "<group>"; };
-		F2C193631D2E81A0002A7FDC /* UninstallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallManager.h; sourceTree = "<group>"; };
-		F2C193641D2E81A0002A7FDC /* UninstallRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallRegionManager.h; sourceTree = "<group>"; };
-		F2C193651D2E81A0002A7FDC /* UninstallServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallServiceManager.h; sourceTree = "<group>"; };
+		F29681981D4618FC00AF6EE8 /* UninstallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallManager.h; sourceTree = "<group>"; };
+		F29681991D4618FC00AF6EE8 /* UninstallRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallRegionManager.h; sourceTree = "<group>"; };
+		F296819A1D4618FC00AF6EE8 /* UninstallServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallServiceManager.h; sourceTree = "<group>"; };
+		F296819B1D4618FC00AF6EE8 /* libUninstallManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUninstallManager.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 				F2B9C3C71D2279F40003F45E /* QuartzCore.framework in Frameworks */,
 				F2B9C3C81D2279F40003F45E /* Security.framework in Frameworks */,
 				F2B9C3C91D2279F40003F45E /* SystemConfiguration.framework in Frameworks */,
-				F2C193661D2E81A0002A7FDC /* libUninstallManager.a in Frameworks */,
+				F296819C1D4618FC00AF6EE8 /* libUninstallManager.a in Frameworks */,
 				F186185B167F4164003CE49E /* UIKit.framework in Frameworks */,
 				F186185D167F4164003CE49E /* Foundation.framework in Frameworks */,
 				F186185F167F4164003CE49E /* CoreGraphics.framework in Frameworks */,
@@ -107,8 +107,8 @@
 		F186184B167F4164003CE49E = {
 			isa = PBXGroup;
 			children = (
-				F2C193601D2E81A0002A7FDC /* libUninstallManager.a */,
-				F2C193611D2E81A0002A7FDC /* include */,
+				F29681961D4618FC00AF6EE8 /* include */,
+				F296819B1D4618FC00AF6EE8 /* libUninstallManager.a */,
 				F14826941714166900D77C06 /* Default-568h@2x.png */,
 				F186189C167F42E7003CE49E /* CoreLocation.framework */,
 				F1861860167F4164003CE49E /* NotifySample */,
@@ -187,20 +187,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F2C193611D2E81A0002A7FDC /* include */ = {
+		F29681961D4618FC00AF6EE8 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				F2C193621D2E81A0002A7FDC /* NotifyManager */,
+				F29681971D4618FC00AF6EE8 /* NotifyManager */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		F2C193621D2E81A0002A7FDC /* NotifyManager */ = {
+		F29681971D4618FC00AF6EE8 /* NotifyManager */ = {
 			isa = PBXGroup;
 			children = (
-				F2C193631D2E81A0002A7FDC /* UninstallManager.h */,
-				F2C193641D2E81A0002A7FDC /* UninstallRegionManager.h */,
-				F2C193651D2E81A0002A7FDC /* UninstallServiceManager.h */,
+				F29681981D4618FC00AF6EE8 /* UninstallManager.h */,
+				F29681991D4618FC00AF6EE8 /* UninstallRegionManager.h */,
+				F296819A1D4618FC00AF6EE8 /* UninstallServiceManager.h */,
 			);
 			path = NotifyManager;
 			sourceTree = "<group>";
