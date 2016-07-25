@@ -61,7 +61,6 @@ b. Expand the **"Link Binary With Library"** pane.
 c. Click on the **'+'** button and select
   * **CoreLocation.framework**
   * **CoreBluetooth.framework**
-  * **CoreTelephony.framework**
   * **QuartzCore.framework**
   * **Security.framework**
   * **SystemConfiguration.framework**
