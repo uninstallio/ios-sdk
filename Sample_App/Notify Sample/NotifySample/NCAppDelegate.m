@@ -9,7 +9,7 @@
 #warning Add UninstallToken and UninstallSecret in the below fields
 
 #define UninstallToken     @""
-#define UninstallSecret    @""
+#define UninstallSecret    @" "
 
 #import "NCAppDelegate.h"
 
