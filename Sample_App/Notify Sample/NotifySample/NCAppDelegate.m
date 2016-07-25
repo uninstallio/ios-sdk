@@ -14,7 +14,7 @@
 #import "NCAppDelegate.h"
 
 #import "NCViewController.h"
-#import "NotifyManager.h"
+#import "UninstallManager.h"
 
 @implementation NCAppDelegate
 
@@ -27,8 +27,8 @@
     [self.window makeKeyAndVisible];
     
     //Check if the app was waken up by notify services
-    [[NotifyManager sharedManager] processLaunchOptions:launchOptions];
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
+    [[UninstallManager sharedManager] processLaunchOptions:launchOptions];
+    [[UninstallManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
 
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
     {
@@ -56,7 +56,7 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     //Starts Notify Services
-    [[NotifyManager sharedManager] didLoseFocus];
+    [[UninstallManager sharedManager] didLoseFocus];
 //    NSLog(@"Going to background");
 
 }
@@ -67,7 +67,7 @@
     //Stops notify services
     
 //    NSLog(@"applicationWillEnterForeground");
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
+    [[UninstallManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
@@ -90,18 +90,18 @@
 
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-    [[NotifyManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
+    [[UninstallManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
 }
 
 - (void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    [[NotifyManager sharedManager] processRemoteNotification:userInfo];
+    [[UninstallManager sharedManager] processRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 }
 
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    [[NotifyManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
+    [[UninstallManager sharedManager] startNotifyServicesWithAppID:kNotifyAPPID key:kNotifySecretKey];
     completionHandler(UIBackgroundFetchResultNoData);
 }
 @end

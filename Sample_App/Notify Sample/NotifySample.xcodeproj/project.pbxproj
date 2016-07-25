@@ -26,7 +26,7 @@
 		F280AB891A8B613800DC5900 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB881A8B613800DC5900 /* AdSupport.framework */; };
 		F280AB8B1A8B614400DC5900 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */; };
 		F280AB8D1A8B614800DC5900 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8C1A8B614800DC5900 /* Security.framework */; };
-		F2BB5D0C1BFB5D530063CF92 /* libNotifyManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2BB5D0B1BFB5D530063CF92 /* libNotifyManager.a */; };
+		F29681951D46175000AF6EE8 /* libUninstallManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F29681941D46175000AF6EE8 /* libUninstallManager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,10 +66,10 @@
 		F280AB881A8B613800DC5900 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F280AB8C1A8B614800DC5900 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		F2BB5D0B1BFB5D530063CF92 /* libNotifyManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNotifyManager.a; sourceTree = "<group>"; };
-		F2BD4BE21AC97A450066AFE9 /* NotifyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyManager.h; sourceTree = "<group>"; };
-		F2BD4BE31AC97A450066AFE9 /* NotifyRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyRegionManager.h; sourceTree = "<group>"; };
-		F2BD4BE41AC97A450066AFE9 /* NotifyServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotifyServiceManager.h; sourceTree = "<group>"; };
+		F29681911D46175000AF6EE8 /* UninstallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallManager.h; sourceTree = "<group>"; };
+		F29681921D46175000AF6EE8 /* UninstallRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallRegionManager.h; sourceTree = "<group>"; };
+		F29681931D46175000AF6EE8 /* UninstallServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallServiceManager.h; sourceTree = "<group>"; };
+		F29681941D46175000AF6EE8 /* libUninstallManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libUninstallManager.a; path = "../../Builds/All-Targets-armv6-armv7-simulator/libUninstallManager.a"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +79,12 @@
 			files = (
 				F280AB8D1A8B614800DC5900 /* Security.framework in Frameworks */,
 				F280AB8B1A8B614400DC5900 /* SystemConfiguration.framework in Frameworks */,
-				F2BB5D0C1BFB5D530063CF92 /* libNotifyManager.a in Frameworks */,
 				F280AB891A8B613800DC5900 /* AdSupport.framework in Frameworks */,
 				F280AB851A8B613200DC5900 /* CoreBluetooth.framework in Frameworks */,
 				F280AB861A8B613200DC5900 /* CoreTelephony.framework in Frameworks */,
 				F280AB871A8B613200DC5900 /* QuartzCore.framework in Frameworks */,
 				F186189D167F42E7003CE49E /* CoreLocation.framework in Frameworks */,
+				F29681951D46175000AF6EE8 /* libUninstallManager.a in Frameworks */,
 				F186185B167F4164003CE49E /* UIKit.framework in Frameworks */,
 				F186185D167F4164003CE49E /* Foundation.framework in Frameworks */,
 				F186185F167F4164003CE49E /* CoreGraphics.framework in Frameworks */,
@@ -106,8 +106,8 @@
 		F186184B167F4164003CE49E = {
 			isa = PBXGroup;
 			children = (
-				F2BB5D0B1BFB5D530063CF92 /* libNotifyManager.a */,
-				F2BD4BE01AC97A450066AFE9 /* include */,
+				F296818F1D46175000AF6EE8 /* include */,
+				F29681941D46175000AF6EE8 /* libUninstallManager.a */,
 				F14826941714166900D77C06 /* Default-568h@2x.png */,
 				F186189C167F42E7003CE49E /* CoreLocation.framework */,
 				F1861860167F4164003CE49E /* NotifySample */,
@@ -185,20 +185,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F2BD4BE01AC97A450066AFE9 /* include */ = {
+		F296818F1D46175000AF6EE8 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				F2BD4BE11AC97A450066AFE9 /* NotifyManager */,
+				F29681901D46175000AF6EE8 /* NotifyManager */,
 			);
-			path = include;
+			name = include;
+			path = "../../Builds/All-Targets-armv6-armv7-simulator/include";
 			sourceTree = "<group>";
 		};
-		F2BD4BE11AC97A450066AFE9 /* NotifyManager */ = {
+		F29681901D46175000AF6EE8 /* NotifyManager */ = {
 			isa = PBXGroup;
 			children = (
-				F2BD4BE21AC97A450066AFE9 /* NotifyManager.h */,
-				F2BD4BE31AC97A450066AFE9 /* NotifyRegionManager.h */,
-				F2BD4BE41AC97A450066AFE9 /* NotifyServiceManager.h */,
+				F29681911D46175000AF6EE8 /* UninstallManager.h */,
+				F29681921D46175000AF6EE8 /* UninstallRegionManager.h */,
+				F29681931D46175000AF6EE8 /* UninstallServiceManager.h */,
 			);
 			path = NotifyManager;
 			sourceTree = "<group>";
@@ -255,12 +256,15 @@
 				ORGANIZATIONNAME = sample;
 				TargetAttributes = {
 					F1861855167F4164003CE49E = {
-						DevelopmentTeam = 6EGK8RUA3R;
+						DevelopmentTeam = WP8MNQC9P9;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
 						};
+					};
+					F1861876167F4164003CE49E = {
+						DevelopmentTeam = T583E442L5;
 					};
 				};
 			};
@@ -465,8 +469,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Pritesh Vora (C25M9NKMHY)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pritesh Vora (C25M9NKMHY)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -495,8 +499,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pritesh Vora (T583E442L5)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pritesh Vora (T583E442L5)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -524,6 +528,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NotifySample.app/NotifySample";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -534,6 +540,7 @@
 				INFOPLIST_FILE = "NotifySampleTests/NotifySampleTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sample.com.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -542,6 +549,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NotifySample.app/NotifySample";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -552,6 +561,7 @@
 				INFOPLIST_FILE = "NotifySampleTests/NotifySampleTests-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sample.com.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
