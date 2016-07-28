@@ -19,7 +19,7 @@
 
 +(UninstallManager *)sharedManager;
 
--(void) startNotifyServicesWithAppID:(NSString *)appID key:(NSString *)key;
+-(void) startNotifyServicesWithAppToken:(NSString *)token secret:(NSString *)secret;
 
 -(void) stopNotifyServices;
 

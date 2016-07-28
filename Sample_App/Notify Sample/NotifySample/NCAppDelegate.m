@@ -9,7 +9,7 @@
 #warning Add UninstallToken and UninstallSecret in the below fields
 
 #define UninstallToken     @""
-#define UninstallSecret    @" "
+#define UninstallSecret    @""
 
 #import "NCAppDelegate.h"
 
@@ -28,7 +28,7 @@
     
     //Check if the app was waken up by notify services
     [[UninstallManager sharedManager] processLaunchOptions:launchOptions];
-    [[UninstallManager sharedManager] startNotifyServicesWithAppID:UninstallToken key:UninstallSecret];
+    [[UninstallManager sharedManager] startNotifyServicesWithAppToken:UninstallToken secret:UninstallSecret];
 
     if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
     {
@@ -67,7 +67,7 @@
     //Stops notify services
     
 //    NSLog(@"applicationWillEnterForeground");
-    [[UninstallManager sharedManager] startNotifyServicesWithAppID:UninstallToken key:UninstallSecret];
+    [[UninstallManager sharedManager] startNotifyServicesWithAppToken:UninstallToken secret:UninstallSecret];
     [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
 }
 
@@ -101,7 +101,7 @@
 
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 {
-    [[UninstallManager sharedManager] startNotifyServicesWithAppID:UninstallToken key:UninstallSecret];
+    [[UninstallManager sharedManager] startNotifyServicesWithAppToken:UninstallToken secret:UninstallSecret];
     completionHandler(UIBackgroundFetchResultNoData);
 }
 @end

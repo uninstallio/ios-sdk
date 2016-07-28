@@ -111,7 +111,7 @@ Once the permissions are set, we can change the code as shown below.
 #####2. Add
 ```
   [[UninstallManager sharedManager] processLaunchOptions:launchOptions];
-  [[UninstallManager sharedManager] startNotifyServicesWithAppID:<uninstall.io_app_token> key:<uninstall.io_app_secret>];
+  [[UninstallManager sharedManager] startNotifyServicesWithAppToken:<uninstall.io_app_token> secret:<uninstall.io_app_secret>];
   
   if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)])
     {
@@ -139,7 +139,7 @@ Note: App Token and App Secret are provided by Uninstall.io and is used to uniqu
 
 #####3. Add
 ```
-  [[UninstallManager sharedManager] startNotifyServicesWithAppID:<uninstall.io_app_token> key:<uninstall.io_app_secret>];
+  [[UninstallManager sharedManager] startNotifyServicesWithAppToken:<uninstall.io_app_token> secret:<uninstall.io_app_secret>];
 ```
 
 To the method
@@ -174,7 +174,7 @@ fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 ```
 #####6. Add
 ```
-    [[UninstallManager sharedManager] startNotifyServicesWithAppID:<uninstall.io_app_token> key:<uninstall.io_app_secret>];
+    [[UninstallManager sharedManager] startNotifyServicesWithAppToken:<uninstall.io_app_token> secret:<uninstall.io_app_secret>];
     completionHandler(UIBackgroundFetchResultNoData);
 
 ```
