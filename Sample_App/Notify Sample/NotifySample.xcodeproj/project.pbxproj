@@ -26,7 +26,7 @@
 		F2B9C3C71D2279F40003F45E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB841A8B613200DC5900 /* QuartzCore.framework */; };
 		F2B9C3C81D2279F40003F45E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8C1A8B614800DC5900 /* Security.framework */; };
 		F2B9C3C91D2279F40003F45E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */; };
-		F2E8CA6A1D49E65A00D12F0A /* libUninstallManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E8CA691D49E65A00D12F0A /* libUninstallManager.a */; };
+		F2E8CA781D49EE8E00D12F0A /* libUninstallManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E8CA771D49EE8E00D12F0A /* libUninstallManager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,10 +67,10 @@
 		F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F280AB8C1A8B614800DC5900 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F28484221D215E01009170DA /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		F2E8CA661D49E65A00D12F0A /* UninstallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallManager.h; sourceTree = "<group>"; };
-		F2E8CA671D49E65A00D12F0A /* UninstallRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallRegionManager.h; sourceTree = "<group>"; };
-		F2E8CA681D49E65A00D12F0A /* UninstallServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallServiceManager.h; sourceTree = "<group>"; };
-		F2E8CA691D49E65A00D12F0A /* libUninstallManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUninstallManager.a; sourceTree = "<group>"; };
+		F2E8CA741D49EE8E00D12F0A /* UninstallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallManager.h; sourceTree = "<group>"; };
+		F2E8CA751D49EE8E00D12F0A /* UninstallRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallRegionManager.h; sourceTree = "<group>"; };
+		F2E8CA761D49EE8E00D12F0A /* UninstallServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallServiceManager.h; sourceTree = "<group>"; };
+		F2E8CA771D49EE8E00D12F0A /* libUninstallManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUninstallManager.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 				F2B9C3C71D2279F40003F45E /* QuartzCore.framework in Frameworks */,
 				F2B9C3C81D2279F40003F45E /* Security.framework in Frameworks */,
 				F2B9C3C91D2279F40003F45E /* SystemConfiguration.framework in Frameworks */,
-				F2E8CA6A1D49E65A00D12F0A /* libUninstallManager.a in Frameworks */,
+				F2E8CA781D49EE8E00D12F0A /* libUninstallManager.a in Frameworks */,
 				F186185B167F4164003CE49E /* UIKit.framework in Frameworks */,
 				F186185D167F4164003CE49E /* Foundation.framework in Frameworks */,
 				F186185F167F4164003CE49E /* CoreGraphics.framework in Frameworks */,
@@ -107,8 +107,8 @@
 		F186184B167F4164003CE49E = {
 			isa = PBXGroup;
 			children = (
-				F2E8CA641D49E65A00D12F0A /* include */,
-				F2E8CA691D49E65A00D12F0A /* libUninstallManager.a */,
+				F2E8CA721D49EE8E00D12F0A /* include */,
+				F2E8CA771D49EE8E00D12F0A /* libUninstallManager.a */,
 				F14826941714166900D77C06 /* Default-568h@2x.png */,
 				F186189C167F42E7003CE49E /* CoreLocation.framework */,
 				F1861860167F4164003CE49E /* NotifySample */,
@@ -187,20 +187,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F2E8CA641D49E65A00D12F0A /* include */ = {
+		F2E8CA721D49EE8E00D12F0A /* include */ = {
 			isa = PBXGroup;
 			children = (
-				F2E8CA651D49E65A00D12F0A /* NotifyManager */,
+				F2E8CA731D49EE8E00D12F0A /* NotifyManager */,
 			);
 			path = include;
 			sourceTree = "<group>";
 		};
-		F2E8CA651D49E65A00D12F0A /* NotifyManager */ = {
+		F2E8CA731D49EE8E00D12F0A /* NotifyManager */ = {
 			isa = PBXGroup;
 			children = (
-				F2E8CA661D49E65A00D12F0A /* UninstallManager.h */,
-				F2E8CA671D49E65A00D12F0A /* UninstallRegionManager.h */,
-				F2E8CA681D49E65A00D12F0A /* UninstallServiceManager.h */,
+				F2E8CA741D49EE8E00D12F0A /* UninstallManager.h */,
+				F2E8CA751D49EE8E00D12F0A /* UninstallRegionManager.h */,
+				F2E8CA761D49EE8E00D12F0A /* UninstallServiceManager.h */,
 			);
 			path = NotifyManager;
 			sourceTree = "<group>";
