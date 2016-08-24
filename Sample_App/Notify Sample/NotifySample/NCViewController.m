@@ -26,7 +26,7 @@
 	// Do any additional setup after loading the view,typically from a nib.
     if (![[[NSUserDefaults standardUserDefaults] valueForKey:@"usersent"] isEqualToString:@"1"])
     {
-         [[UninstallManager sharedManager] identify:@"1234" traits:@{ @"name": @"Aravind",@"email": @"aravind@notiphi.com"}];
+         [[UninstallManager sharedManager] identify:@"1234" traits:@{@"email": @"aravind@notiphi.com"}];
         [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"usersent"];
     }
    

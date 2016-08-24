@@ -19,6 +19,7 @@
 		F186187A167F4164003CE49E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185A167F4164003CE49E /* UIKit.framework */; };
 		F186187B167F4164003CE49E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186185C167F4164003CE49E /* Foundation.framework */; };
 		F1861886167F4164003CE49E /* NotifySampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F1861885167F4164003CE49E /* NotifySampleTests.m */; };
+		F25450F01D6DA702006A502B /* libUninstallManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F25450EF1D6DA702006A502B /* libUninstallManager.a */; };
 		F2B9C3C31D2279F40003F45E /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB881A8B613800DC5900 /* AdSupport.framework */; };
 		F2B9C3C41D2279F40003F45E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB821A8B613200DC5900 /* CoreBluetooth.framework */; };
 		F2B9C3C51D2279F40003F45E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F186189C167F42E7003CE49E /* CoreLocation.framework */; };
@@ -26,7 +27,6 @@
 		F2B9C3C71D2279F40003F45E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB841A8B613200DC5900 /* QuartzCore.framework */; };
 		F2B9C3C81D2279F40003F45E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8C1A8B614800DC5900 /* Security.framework */; };
 		F2B9C3C91D2279F40003F45E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F280AB8A1A8B614400DC5900 /* SystemConfiguration.framework */; };
-		F2E8CA781D49EE8E00D12F0A /* libUninstallManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2E8CA771D49EE8E00D12F0A /* libUninstallManager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +60,7 @@
 		F1861884167F4164003CE49E /* NotifySampleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotifySampleTests.h; sourceTree = "<group>"; };
 		F1861885167F4164003CE49E /* NotifySampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotifySampleTests.m; sourceTree = "<group>"; };
 		F186189C167F42E7003CE49E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		F25450EF1D6DA702006A502B /* libUninstallManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUninstallManager.a; sourceTree = "<group>"; };
 		F280AB821A8B613200DC5900 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		F280AB831A8B613200DC5900 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		F280AB841A8B613200DC5900 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -70,7 +71,6 @@
 		F2E8CA741D49EE8E00D12F0A /* UninstallManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallManager.h; sourceTree = "<group>"; };
 		F2E8CA751D49EE8E00D12F0A /* UninstallRegionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallRegionManager.h; sourceTree = "<group>"; };
 		F2E8CA761D49EE8E00D12F0A /* UninstallServiceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UninstallServiceManager.h; sourceTree = "<group>"; };
-		F2E8CA771D49EE8E00D12F0A /* libUninstallManager.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libUninstallManager.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 				F2B9C3C71D2279F40003F45E /* QuartzCore.framework in Frameworks */,
 				F2B9C3C81D2279F40003F45E /* Security.framework in Frameworks */,
 				F2B9C3C91D2279F40003F45E /* SystemConfiguration.framework in Frameworks */,
-				F2E8CA781D49EE8E00D12F0A /* libUninstallManager.a in Frameworks */,
+				F25450F01D6DA702006A502B /* libUninstallManager.a in Frameworks */,
 				F186185B167F4164003CE49E /* UIKit.framework in Frameworks */,
 				F186185D167F4164003CE49E /* Foundation.framework in Frameworks */,
 				F186185F167F4164003CE49E /* CoreGraphics.framework in Frameworks */,
@@ -107,8 +107,8 @@
 		F186184B167F4164003CE49E = {
 			isa = PBXGroup;
 			children = (
+				F25450EF1D6DA702006A502B /* libUninstallManager.a */,
 				F2E8CA721D49EE8E00D12F0A /* include */,
-				F2E8CA771D49EE8E00D12F0A /* libUninstallManager.a */,
 				F14826941714166900D77C06 /* Default-568h@2x.png */,
 				F186189C167F42E7003CE49E /* CoreLocation.framework */,
 				F1861860167F4164003CE49E /* NotifySample */,

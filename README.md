@@ -206,7 +206,7 @@ Pass the Unique System User ID and Email Id to our SDK. This data will be used t
 	NSString* isFirstTimeInstall = @"isFirstTimeInstall";
 	if([preferences objectForKey: isFirstTimeInstall] == nil)
 	{
-	    [[UninstallManager sharedManager] identify:@"userId" traits:@{ @"name": @"User_Name",@"email": @"user@xyz.com" }];
+	    [[UninstallManager sharedManager] identify:@"<internal_user_id>" traits:@{@"email": @"<user_email>" }];
 	}
 	const NSInteger presentLevel = 1;
 	[preferences setBool:presentLevel forKey:isFirstTimeInstall];
