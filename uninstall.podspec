@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Uninstall"
-  s.version      = "1.1.7"
+  s.version      = "1.1.8"
   s.summary      = "World’s First Solution on Uninstall Mystery"
 
   s.description  = <<-DESC
