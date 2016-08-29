@@ -19,7 +19,7 @@ Here are the steps for integration.  Click on the links below to jump to a parti
 * [Step 6 : Send us your Push certificate for testing](#step-6--send-us-your-push-certificate-for-testing)
 
 If you are using Cocopods, skip Step 1 & Step 2 from the above steps and follow the below mentioned Step 1.
-* Step 1 : Add uninstall pod to Podfile using ```pod 'Uninstall', '~> 1.0'``` 
+* Step 1 : Add uninstall pod to Podfile using ```pod 'Uninstallio', '~> 1.0'``` 
 
 ###Step 1 : Download the zipped package and unzip the file
 
