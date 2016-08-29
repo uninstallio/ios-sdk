@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Uninstall"
-  s.version      = "1.1.6"
+  s.version      = "1.1.7"
   s.summary      = "World’s First Solution on Uninstall Mystery"
 
   s.description  = <<-DESC
@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/uninstallio/ios-sdk.git", :tag => s.version.to_s }
 
   s.source_files   = "Builds/All-Targets-armv6-armv7-simulator/include/**/*.{h,m}"
-  s.preserve_paths = "Builds/All-Targets-armv6-armv7-simulator/libNotifyManager.a"
-  s.ios.vendored_library = "Builds/All-Targets-armv6-armv7-simulator/libNotifyManager.a"
+  s.preserve_paths = "Builds/All-Targets-armv6-armv7-simulator/libUninstallManager.a"
+  s.ios.vendored_library = "Builds/All-Targets-armv6-armv7-simulator/libUninstallManager.a"
   s.frameworks     = 'CoreLocation','CoreBluetooth','CoreTelephony','QuartzCore','Security','SystemConfiguration','AdSupport'
   s.requires_arc = true
 end
