@@ -109,7 +109,7 @@ Once the permissions are set, we can change the code as shown below.
 **"UninstallManager.h"** to your app delegate
 
 #####2. Add
-```Objectve-C
+```Objective-C
   [[UninstallManager sharedManager] processLaunchOptions:launchOptions];
   [[UninstallManager sharedManager] startNotifyServicesWithAppToken:<uninstall.io_app_token> secret:<uninstall.io_app_secret>];
   
