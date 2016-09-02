@@ -25,13 +25,13 @@ If you are using Cocopods, skip Step 1 & Step 2 from the above steps and follow 
 
 Clone this repository
 
-```
+```Shell
 git clone https://github.com/uninstallio/ios-sdk.git
 ```
 
 or download the zipped package.
 
-```
+```Shell
 wget https://github.com/uninstallio/ios-sdk/archive/master.zip
 ```
 Unzip the files (if downloaded as a zip).
@@ -272,7 +272,7 @@ When saving the file, use the Personal Information Exchange (.p12) format.
 
 After saving the p12 file, open Terminal in your Mac. Go to the folder in which you have saved the p12 file using ```cd <path_to_directory>``` command. Once inside the directory, enter the following command 
 
-```
+```Shell
   openssl pkcs12 -in <input p12 file> -out <output pem file name> -nodes
 
 ```
