@@ -85,7 +85,7 @@ The easiest way to do this is to use the new Capabilities tab in Xcode 5’s pro
 
 Alternatively, you can edit the key manually in the Info.plist file:
 
-```
+```XML
 <key>UIBackgroundModes</key>
   <array>
     <string>fetch</string>
@@ -95,7 +95,7 @@ Alternatively, you can edit the key manually in the Info.plist file:
 
 You would also need to add the following device capability in the Info.plist file.
 
-```
+```XML
 <key>UIRequiredDeviceCapabilities</key>
   <array>
     <string>location-services</string>
@@ -109,7 +109,7 @@ Once the permissions are set, we can change the code as shown below.
 **"UninstallManager.h"** to your app delegate
 
 #####2. Add
-```
+```Objectve-C
   [[UninstallManager sharedManager] processLaunchOptions:launchOptions];
   [[UninstallManager sharedManager] startNotifyServicesWithAppToken:<uninstall.io_app_token> secret:<uninstall.io_app_secret>];
   
@@ -128,7 +128,7 @@ Once the permissions are set, we can change the code as shown below.
 
 to the method
 
-```
+```Objective-C
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:
 (NSDictionary *)launchOptions
 ```
@@ -138,13 +138,13 @@ in your AppDelegate.
 Note: App Token and App Secret are provided by Uninstall.io and is used to uniquely identify your application. If you do not have the token and secret then please drop a mail to **[ios-dev-support@uninstall.io] [1]** to get these credentials for your app.
 
 #####3. Add
-```
+```Objective-C
   [[UninstallManager sharedManager] startNotifyServicesWithAppToken:<uninstall.io_app_token> secret:<uninstall.io_app_secret>];
 ```
 
 To the method
 
-```
+```Objective-C
   - (void)applicationWillEnterForeground:(UIApplication *)application
 ```
 
@@ -152,44 +152,44 @@ In your app delegate.
 
 
 #####4. Add
-```
+```Objective-C
     [[UninstallManager sharedManager] registerForPushNotificationUsingDeviceToken:deviceToken];
 ```
 to the method
-```
+```Objective-C
 -(void) application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 ```
 
 #####5. Add
-```
+```Objective-C
     [[UninstallManager sharedManager] processRemoteNotification:userInfo];
     completionHandler(UIBackgroundFetchResultNewData);
 
 ```
 to the method
-```
+```Objective-C
 - (void)  application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 
 ```
 #####6. Add
-```
+```Objective-C
     [[UninstallManager sharedManager] startNotifyServicesWithAppToken:<uninstall.io_app_token> secret:<uninstall.io_app_secret>];
     completionHandler(UIBackgroundFetchResultNoData);
 
 ```
 to the method
-```
+```Objective-C
 - (void) application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler
 ```
 
 #####7. Add
-```
+```Objective-C
     [[UninstallManager sharedManager] didLoseFocus];
 
 ```
 to the method
-```
+```Objective-C
 - (void)applicationDidEnterBackground:(UIApplication *)application
 ```
 
@@ -201,7 +201,7 @@ We provide an additional option for you to send us additional events. The events
 #####1) Unique System User ID and Email ID
 Pass the Unique System User ID and Email Id to our SDK. This data will be used to synchronize the ID’s between our systems and also to take certain actions. This needs to done only once. Help code snippet below. This code snippet is to be added where you have obtained the user_id/email for the user in the app
 
-```
+```Objective-C
 	NSUserDefaults* preferences = [NSUserDefaults standardUserDefaults];
 	NSString* isFirstTimeInstall = @"isFirstTimeInstall";
 	if([preferences objectForKey: isFirstTimeInstall] == nil)
@@ -224,7 +224,7 @@ If you use any third party analytics platform and supports data extraction via A
 In case you do not use any 3rd party platform or the platform doesn’t support any API then pass the data to our SDK via our event-capturing feature. Help code snippet below.
 
 
-```
+```Objective-C
  [[UninstallManager sharedManager] track:@"eventName"  properties:@{ @"eventValue": @"Event-Value",@"IDSync": @"ABC1234"}];
 
 ```
